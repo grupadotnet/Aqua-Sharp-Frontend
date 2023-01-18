@@ -17,6 +17,6 @@
     "jsx": "react-jsx"
   },
 
-  "include": ["src", ".eslintrc.cjs", "vite.config.ts"],
+  "include": ["src", ".eslintrc.cjs", "vite.config.ts", "*.test.tsx"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
