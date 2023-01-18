@@ -1,3 +1,4 @@
+import './Button.scss';
 
 function Button(props: any) {
     const buttonType: 'OK' | 'Cancel' | 'Action' = props.type;
