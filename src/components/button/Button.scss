@@ -1,6 +1,16 @@
 .button{
-    border-radius: 2em;
+    font-family: Nunito;
+    border: none;
+    border-radius: 2.2em;
+    padding: 1em;
+    color: white;
     &-ok{
-        background-color: green;
+        background-color: #1cc88a;
+    }
+    &-cancel{
+        background-color: #e74a3b;
+    }
+    &-action{
+        background-color: #4e73df;
     }
 }
