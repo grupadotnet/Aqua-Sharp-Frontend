@@ -1,0 +1,4 @@
+{
+  "welcome_to_react": "Welcome to React and react-i18next",
+  "variable_example": "Hi, my name is {{name}}"
+}
