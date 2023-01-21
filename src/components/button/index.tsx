@@ -5,7 +5,7 @@ interface IButton {
   children?: string,
 }
 
-function Button(props: IButton) {
+export const Button = (props: IButton) => {
     switch (props.type) {
         case 'OK':
             return (
@@ -24,5 +24,3 @@ function Button(props: IButton) {
             break;
     }
 }
-
-export default Button;
