@@ -25,11 +25,35 @@ afterEach(() => {
 });
 
 describe('Button component', () => {
-  it('Children exists', () => {
+  it('Children exists, no type', () => {
+    act(() => {
+      root.render(<Button>Test value</Button>);
+    });
+    expect(container.textContent).toBe('Test value');
+  });
+  it("Children exists, type='OK'", () => {
     act(() => {
       root.render(<Button type="OK">Test value</Button>);
     });
     expect(container.textContent).toBe('Test value');
+  });
+  it("Children exists, type='Cancel'", () => {
+    act(() => {
+      root.render(<Button type="Cancel">Test value</Button>);
+    });
+    expect(container.textContent).toBe('Test value');
+  });
+  it("Children exists, type='Action'", () => {
+    act(() => {
+      root.render(<Button type="Action">Test value</Button>);
+    });
+    expect(container.textContent).toBe('Test value');
+  });
+  it("Children doesn't exist, no type", () => {
+    act(() => {
+      root.render(<Button></Button>);
+    });
+    expect(container.textContent).toBe('');
   });
   it("Children doesn't exist, type='OK'", () => {
     act(() => {
