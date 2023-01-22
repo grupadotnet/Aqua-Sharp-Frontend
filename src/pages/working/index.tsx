@@ -1,7 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import { languages } from '../../assets/languages';
 import i18next from 'i18next';
-import Chart from '../../components/chart';
+import Chart, { exampleData } from '../../components/chart';
 
 export const Working: React.FC = () => {
   const { t } = useTranslation();
@@ -27,7 +27,14 @@ export const Working: React.FC = () => {
       </ul>
       {/* i18next end */}
       {/* chart start */}
-      <Chart />
+      <div style={{ margin: 'auto', width: '50%' }}>
+        <Chart
+          minY={20000}
+          maxY={100000}
+          dataX={exampleData.map((el) => el.year)}
+          dataY={exampleData.map((el) => el.userGain)}
+        />
+      </div>
       {/* chart end */}
     </div>
   );

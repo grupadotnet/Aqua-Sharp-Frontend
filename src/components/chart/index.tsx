@@ -5,7 +5,9 @@ import { Chart as ChartJS } from 'chart.js/auto';
 import { Point } from 'chart.js/dist/helpers/helpers.canvas';
 import { BubbleController } from 'chart.js/dist';
 
-const exampleData = [
+import './chart.scss';
+
+export const exampleData = [
   {
     id: 1,
     year: 2016,
@@ -15,51 +17,73 @@ const exampleData = [
   {
     id: 2,
     year: 2017,
-    userGain: 45677,
+    userGain: 50000,
     userLost: 345,
   },
   {
     id: 3,
     year: 2018,
-    userGain: 78888,
+    userGain: 80000,
     userLost: 555,
   },
   {
     id: 4,
     year: 2019,
-    userGain: 90000,
+    userGain: 50000,
     userLost: 4555,
   },
   {
     id: 5,
     year: 2020,
-    userGain: 4300,
-    userLost: 234,
+    userGain: 80000,
+    userLost: 3221,
   },
 ];
 
-const Chart: React.FC = () => {
-  const data: ChartData<
+type Props = {
+  dataX: string[] | number[];
+  dataY: string[] | number[];
+  minY?: number;
+  maxY?: number;
+};
+
+const Chart: React.FC<Props> = ({ dataX, dataY, minY, maxY }: Props) => {
+  ChartJS.register(CategoryScale);
+
+  const charData: ChartData<
     'line',
-    (number | Point | [number, number] | BubbleController | null)[],
+    (number | Point | [number, number] | BubbleController | null | string)[],
     unknown
   > = {
-    labels: exampleData.map((data) => data.year),
+    labels: dataX,
     datasets: [
       {
-        data: exampleData.map((data) => data.userGain),
-        backgroundColor: ['#344AE1'],
+        data: dataY,
+        backgroundColor: '#344AE115',
+        pointBackgroundColor: '#344AE1',
         borderColor: '#344AE1',
         borderWidth: 2,
+        fill: true,
       },
     ],
   };
 
-  ChartJS.register(CategoryScale);
+  const options = {
+    plugins: {
+      legend: {
+        display: false,
+      },
+    },
+    tension: 0.4,
+    scales: {
+      y: {
+        min: minY,
+        max: maxY,
+      },
+    },
+  };
 
-  const options = {};
-
-  return <Line data={data} options={options} />;
+  return <Line data={charData} options={options} />;
 };
 
 export default Chart;
