@@ -1,6 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import { languages } from '../../assets/languages';
 import i18next from 'i18next';
+import Chart from '../../components/chart';
 
 export const Working: React.FC = () => {
   const { t } = useTranslation();
@@ -25,6 +26,9 @@ export const Working: React.FC = () => {
         ))}
       </ul>
       {/* i18next end */}
+      {/* chart start */}
+      <Chart />
+      {/* chart end */}
     </div>
   );
 };
