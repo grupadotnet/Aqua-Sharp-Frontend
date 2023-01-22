@@ -47,7 +47,6 @@ const Chart: React.FC = () => {
     labels: exampleData.map((data) => data.year),
     datasets: [
       {
-        label: undefined,
         data: exampleData.map((data) => data.userGain),
         backgroundColor: ['#344AE1'],
         borderColor: '#344AE1',
