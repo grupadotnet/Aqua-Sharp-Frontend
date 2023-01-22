@@ -5,8 +5,6 @@ import { Chart as ChartJS } from 'chart.js/auto';
 import { Point } from 'chart.js/dist/helpers/helpers.canvas';
 import { BubbleController } from 'chart.js/dist';
 
-import './chart.scss';
-
 export const exampleData = [
   {
     id: 1,
