@@ -1,15 +1,15 @@
-.button{
-    border: none;
-    border-radius: 3em;
-    padding: 1.5em;
-    color: white;
-    &-ok{
-        background-color: #1cc88a;
-    }
-    &-cancel{
-        background-color: #e74a3b;
-    }
-    &-action{
-        background-color: #4e73df;
-    }
+.button {
+  border: none;
+  border-radius: 3em;
+  padding: 1.5em;
+  color: white;
+  &-ok {
+    background-color: #1cc88a;
+  }
+  &-cancel {
+    background-color: #e74a3b;
+  }
+  &-action {
+    background-color: #4e73df;
+  }
 }
