@@ -29,9 +29,13 @@ export const Working: React.FC = () => {
       {/* chart start */}
       <div style={{ margin: 'auto', width: '50%' }}>
         <Chart
+          // minimum on y axis (optional - not giving minimum makes the lowest value as minimum)
           minY={20000}
+          // maximum on y axis (optional - not giving maximum makes the highest value as maximum)
           maxY={100000}
+          // data displayed on x axis, it has to be array of numebers/strings (required)
           dataX={exampleData.map((el) => el.year)}
+          // data displayed on y axis, it has to be array of numbers/string (required)
           dataY={exampleData.map((el) => el.userGain)}
         />
       </div>

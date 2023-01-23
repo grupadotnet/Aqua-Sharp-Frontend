@@ -5,6 +5,7 @@ import { Chart as ChartJS } from 'chart.js/auto';
 import { Point } from 'chart.js/dist/helpers/helpers.canvas';
 import { BubbleController } from 'chart.js/dist';
 
+// just for example
 export const exampleData = [
   {
     id: 1,
@@ -81,7 +82,7 @@ const Chart: React.FC<Props> = ({ dataX, dataY, minY, maxY }: Props) => {
     },
   };
 
-  return <Line data={charData} options={options} />;
+  return <Line data-testid="line-chart" data={charData} options={options} />;
 };
 
 export default Chart;
