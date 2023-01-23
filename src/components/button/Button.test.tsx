@@ -1,7 +1,7 @@
 import { createRoot } from 'react-dom/client';
 import { act } from 'react-dom/test-utils';
 
-import { Button } from '.';
+import Button from '.';
 
 const globalWithAct = global as typeof globalThis & {
   IS_REACT_ACT_ENVIRONMENT: boolean;

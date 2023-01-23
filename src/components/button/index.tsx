@@ -5,7 +5,7 @@ interface IButton {
   children?: string;
 }
 
-export const Button = (props: IButton) => {
+const Button = (props: IButton) => {
   const buttonType = props.type ?? 'Action';
   const defaultChildren = {
     OK: 'Zatwierdź',
