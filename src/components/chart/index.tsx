@@ -44,9 +44,18 @@ type Props = {
   dataY: string[] | number[];
   minY?: number;
   maxY?: number;
+  titleX?: string;
+  titleY?: string;
 };
 
-const Chart: React.FC<Props> = ({ dataX, dataY, minY, maxY }: Props) => {
+const Chart: React.FC<Props> = ({
+  dataX,
+  dataY,
+  minY,
+  maxY,
+  titleX,
+  titleY,
+}: Props) => {
   ChartJS.register(CategoryScale);
 
   const charData: ChartData<
@@ -78,6 +87,31 @@ const Chart: React.FC<Props> = ({ dataX, dataY, minY, maxY }: Props) => {
       y: {
         min: minY,
         max: maxY,
+        title: {
+          display: true,
+          text: titleY,
+          padding: {
+            bottom: 25,
+          },
+          font: {
+            weight: 'bold',
+            size: 18,
+          },
+        },
+      },
+      x: {
+        title: {
+          fontWeight: 700,
+          display: true,
+          text: titleX,
+          padding: {
+            top: 25,
+          },
+          font: {
+            weight: 'bold',
+            size: 18,
+          },
+        },
       },
     },
   };

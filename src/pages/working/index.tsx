@@ -37,6 +37,10 @@ export const Working: React.FC = () => {
           dataX={exampleData.map((el) => el.year)}
           // data displayed on y axis, it has to be array of numbers/string (required)
           dataY={exampleData.map((el) => el.userGain)}
+          // title of an X axis, it has to be string (optional)
+          titleX="years"
+          // title of an Y axis, it has to be string (optional)
+          titleY="user gain"
         />
       </div>
       {/* chart end */}
