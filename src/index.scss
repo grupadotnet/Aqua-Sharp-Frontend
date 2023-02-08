@@ -10,3 +10,56 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 }
+
+select
+{
+  appearance:none;
+  color: #fff;
+  background-color: #2653d4;
+  border: 0;
+  outline: 0;
+  font-weight: 400;
+  vertical-align: middle;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  border-radius: 0.35rem;
+  flex: 1;
+}
+
+div:has(select) 
+{
+  position: relative;
+  display: flex;
+  background-color: #2653d4;
+  width: 9em;
+  height: 2.15em;
+  border-radius: 0.35rem;
+  line-height: 2.2;
+  overflow: hidden;
+  padding-top: 0.1rem;
+  padding-bottom: 0.1rem;
+  
+  &::after
+    {
+      content: '\25BC';
+      position: absolute;
+      top: 0;
+      right: .65em;
+      padding: 0;
+      margin: 0;
+      background: #2653d4;
+      cursor:pointer;
+      pointer-events:none;
+      transform: scale(.8,.35);
+      color: white;
+    }
+}
+
+option
+{
+  width: 100%;
+  font-size: .8em;
+  font-weight: 400;
+  color: #707072;
+  background-color: white;
+}
