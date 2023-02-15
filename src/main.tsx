@@ -5,6 +5,7 @@ import i18n from 'i18next';
 import LanguageDetector from 'i18next-browser-languagedetector';
 import HttpApi from 'i18next-http-backend';
 import { initReactI18next } from 'react-i18next';
+import LoadingSpinner from './components/loadingSpinner';
 
 import App from './App';
 
@@ -38,8 +39,7 @@ i18n
   });
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
-  // TODO SPINNER COMES TO FALLBACK
-  <Suspense fallback={<div>loading</div>}>
+  <Suspense fallback={<LoadingSpinner />}>
     <React.StrictMode>
       <BrowserRouter>
         <App />
