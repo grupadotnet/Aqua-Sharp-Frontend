@@ -11,6 +11,7 @@ import App from './App';
 
 import './index.scss';
 import '/node_modules/flag-icons/css/flag-icons.min.css';
+import './assets/bootstrap/css/sb-admin-2.min.css';
 
 // i18n config
 i18n
