@@ -19,6 +19,7 @@ import {
   LanguageDropdown,
   LineChart,
   PasswordInput,
+  Tile,
 } from '@/components';
 
 import './Working.scss';
@@ -142,6 +143,9 @@ export const Working: React.FC = () => {
           </Button>
         </Form>
       </Row>
+      <Tile title="Earnings Overview">
+        <div>Siemano</div>
+      </Tile>
       {/* input end */}
     </div>
   );
