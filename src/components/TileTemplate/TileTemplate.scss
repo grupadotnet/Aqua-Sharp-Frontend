@@ -1,0 +1,18 @@
+.tile-template {
+  border: 0.05rem solid #e3e6f0;
+  border-radius: 0.25rem;
+}
+
+.tile-template-header {
+  border: 0.05rem solid #e3e6f0;
+  background-color: #F8F9FC;
+  font-weight: bold;
+  padding-bottom: 0.625rem;
+  padding-top: 0.625rem;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+}
+
+.tile-template-body {
+  background-color: white;
+}
