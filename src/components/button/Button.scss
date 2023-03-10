@@ -1,15 +1,17 @@
+@use '../../styles/colors.scss' as colors;
+
 .button {
   border: none;
   border-radius: 3em;
   padding: 1.5em;
   color: white;
   &-ok {
-    background-color: #1cc88a;
+    background-color: colors.$green;
   }
   &-cancel {
-    background-color: #e74a3b;
+    background-color: colors.$red;
   }
   &-action {
-    background-color: #4e73df;
+    background-color: colors.$blue;
   }
 }
