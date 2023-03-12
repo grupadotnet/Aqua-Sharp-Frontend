@@ -3,10 +3,10 @@ import { languages } from '../../assets/languages';
 import i18next from 'i18next';
 import { BarChart, LineChart } from '../../components/chart';
 import { exampleData } from '../../components/chart/config';
-
 import { CategoryScale } from 'chart.js';
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { Chart as ChartJS } from 'chart.js/auto';
+import DataTile from '../../components/dataTile';
 
 export const Working: React.FC = () => {
   const { t } = useTranslation();
@@ -65,6 +65,11 @@ export const Working: React.FC = () => {
         />
       </div>
       {/* chart end */}
+      {/* data tile start */}
+      <div style={{ margin: 'auto', display: 'flex' }}>
+        <DataTile></DataTile>
+      </div>
+      {/* data tile end */}
     </div>
   );
 };
