@@ -25,52 +25,46 @@ afterEach(() => {
 });
 
 describe('DataTile component', () => {
-  // it('Children exists, no type', () => {
-  //   act(() => {
-  //     root.render(<Button>Test value</Button>);
-  //   });
-  //   expect(container.textContent).toBe('Test value');
-  // });
-  // it("Children exists, type='OK'", () => {
-  //   act(() => {
-  //     root.render(<Button type="OK">Test value</Button>);
-  //   });
-  //   expect(container.textContent).toBe('Test value');
-  // });
-  // it("Children exists, type='Cancel'", () => {
-  //   act(() => {
-  //     root.render(<Button type="Cancel">Test value</Button>);
-  //   });
-  //   expect(container.textContent).toBe('Test value');
-  // });
-  // it("Children exists, type='Action'", () => {
-  //   act(() => {
-  //     root.render(<Button type="Action">Test value</Button>);
-  //   });
-  //   expect(container.textContent).toBe('Test value');
-  // });
-  // it("Children doesn't exist, no type", () => {
-  //   act(() => {
-  //     root.render(<Button></Button>);
-  //   });
-  //   expect(container.textContent).toBe('');
-  // });
-  // it("Children doesn't exist, type='OK'", () => {
-  //   act(() => {
-  //     root.render(<Button type="OK"></Button>);
-  //   });
-  //   expect(container.textContent).toBe('Zatwierdź');
-  // });
-  // it("Children doesn't exist, type='Cancel'", () => {
-  //   act(() => {
-  //     root.render(<Button type="Cancel"></Button>);
-  //   });
-  //   expect(container.textContent).toBe('Anuluj');
-  // });
-  // it("Children doesn't exist, type='Action'", () => {
-  //   act(() => {
-  //     root.render(<Button type="Action"></Button>);
-  //   });
-  //   expect(container.textContent).toBe('');
-  // });
+  it('Children exists, no title, green theme', () => {
+    act(() => {
+      root.render(<DataTile theme='green'>Test value</DataTile>);
+    });
+    expect(container.querySelector('p:first-child').textContent).toBe('Aktualne ph wody');
+    expect(container.querySelector('p:nth-child(2)').textContent).toBe('Test value');
+  });
+  it('Children exists, no title, no theme', () => {
+    act(() => {
+      root.render(<DataTile>Test value</DataTile>);
+    });
+    expect(container.querySelector('p:first-child').textContent).toBe('Aktualna temperatura');
+    expect(container.querySelector('p:nth-child(2)').textContent).toBe('Test value');
+  });
+  it('Children exists, no title, blue theme', () => {
+    act(() => {
+      root.render(<DataTile theme='blue'>Test value</DataTile>);
+    });
+    expect(container.querySelector('p:first-child').textContent).toBe('Aktualna temperatura');
+    expect(container.querySelector('p:nth-child(2)').textContent).toBe('Test value');
+  });
+  it('Children exists, no title, yellow theme', () => {
+    act(() => {
+      root.render(<DataTile theme='yellow'>Test value</DataTile>);
+    });
+    expect(container.querySelector('p:first-child').textContent).toBe('Status grzałki');
+    expect(container.querySelector('p:nth-child(2)').textContent).toBe('Test value');
+  });
+  it('Children exists, no title, teal theme', () => {
+    act(() => {
+      root.render(<DataTile theme='teal'>Test value</DataTile>);
+    });
+    expect(container.querySelector('p:first-child').textContent).toBe('Status światła');
+    expect(container.querySelector('p:nth-child(2)').textContent).toBe('Test value');
+  });
+  it('No children, title exists, no theme', () => {
+    act(() => {
+      root.render(<DataTile title='Test title'></DataTile>);
+    });
+    expect(container.querySelector('p:first-child').textContent).toBe('Test title');
+    expect(container.querySelector('p:nth-child(2)').textContent).toBe('???');
+  });
 });
