@@ -15,13 +15,10 @@ const DataTile = (props: IDataTile) => {
     yellow: 'Status grzałki',
   };
   return (
-    <div className='tile-border'>
-      <div className={`tile tile-${tileTheme.toLowerCase()}`}>
-        <p>{props.title ?? defaultTitle[tileTheme]}</p>
-        <p>{props.children ?? '???'}</p>
-      </div>
+    <div className={`tile tile-${tileTheme.toLowerCase()}`}>
+      <p>{props.title ?? defaultTitle[tileTheme]}</p>
+      <p>{props.children ?? '???'}</p>
     </div>
-    
   );
 };
 
