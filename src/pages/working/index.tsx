@@ -66,7 +66,7 @@ export const Working: React.FC = () => {
       </div>
       {/* chart end */}
       {/* data tile start */}
-      <div style={{ margin: 'auto', display: 'flex' }}>
+      <div style={{ margin: 'auto', width: '80%', display: 'flex' }}>
         <DataTile></DataTile>
       </div>
       {/* data tile end */}
