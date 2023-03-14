@@ -66,8 +66,15 @@ export const Working: React.FC = () => {
       </div>
       {/* chart end */}
       {/* data tile start */}
-      <div style={{ margin: 'auto', width: '80%', display: 'flex' }}>
-        <DataTile></DataTile>
+      <div style={{ margin: 'auto', width: '80%', display: 'flex', flexWrap: 'wrap', gap: '1em', justifyContent: 'center'}}>
+        <DataTile theme='green'>pH 7</DataTile>
+        <DataTile theme='blue'>kolejna wartość</DataTile>
+        <DataTile theme='yellow'>jakaś wartość</DataTile>
+        <DataTile theme='teal'>2137</DataTile>
+        <DataTile theme='green' title='customowy tytuł 1'></DataTile>
+        <DataTile theme='blue' title='customowy tytuł 2'></DataTile>
+        <DataTile theme='yellow' title='customowy tytuł 3'></DataTile>
+        <DataTile theme='teal' title='customowy tytuł 4'></DataTile>
       </div>
       {/* data tile end */}
     </div>
