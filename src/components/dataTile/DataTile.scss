@@ -1,51 +1,63 @@
 @use '../../styles/colors' as colors;
 @use '../../styles/fonts' as fonts;
 
-.tile-border{
-  border-left: 0.25rem solid colors.$primary;
-  box-shadow: 0 .15rem 1.75rem 0 rgba(58,59,69,.15);
-  border-radius: 0.35rem;
-}
-
 .tile {
+  flex: 1;
   background-color: #fff;
-  background-clip: border-box;
   border: 1px solid #e3e6f0;
+  border-left: none;
   border-radius: 0.35rem;
   padding: 1.25rem;
+  box-shadow: 0 .15rem 1.75rem 0 rgba(58,59,69,.15);
+  position: relative;
+  min-width: 12em;
+  p{
+    color: colors.$dark;
+    font-weight: 500;
+    margin: 0;
+  }
+  p:first-child{
+    text-transform: uppercase;
+    font-size: 0.5rem;
+  }
   &-green {
-    //background-color: colors.$green;
     p:first-child{
       color: colors.$green;
-      text-transform: uppercase;
     }
   }
   &-teal {
-    //background-color: colors.$teal;
     p:first-child{
       color: colors.$teal;
-      text-transform: uppercase;
     }
   }
   &-blue {
-    //background-color: colors.$primary;
     p:first-child{
       color: colors.$primary;
-      text-transform: uppercase;
     }
   }
   &-yellow {
-    //background-color: colors.$yellow;
     p:first-child{
       color: colors.$yellow;
-      text-transform: uppercase;
     }
-  }
-  p{
-    color: colors.$dark;
-    font-family: fonts.$base-family;
-    font-weight: 700;
-    margin: 0;
   }
 }
 
+.tile::before{
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-left: 0.25rem solid colors.$primary;
+  border-radius: 0.35rem;
+}
+
+.tile-green::before{
+  border-left: 0.25rem solid colors.$green;
+}
+
+.tile-teal::before{
+  border-left: 0.25rem solid colors.$teal;
+}
+
+.tile-yellow::before{
+  border-left: 0.25rem solid colors.$yellow;
+}
