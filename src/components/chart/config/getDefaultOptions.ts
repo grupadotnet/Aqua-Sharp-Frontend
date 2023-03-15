@@ -4,7 +4,6 @@ const getDefaultOptions = (
   titleY?: string,
   titleX?: string
 ) => ({
-  responsive: true,
   maintainAspectRatio: false,
   plugins: {
     legend: {

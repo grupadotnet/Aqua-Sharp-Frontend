@@ -7,10 +7,8 @@ import {
   colors,
 } from '../config';
 
-type Props = ChartProps & { xs?: number };
-
-const LineChart = (props: Props) => {
-  const { dataX, dataY, minY, maxY, titleX, titleY, xs } = props;
+const LineChart = (props: ChartProps) => {
+  const { dataX, dataY, minY, maxY, titleX, titleY } = props;
 
   const [options, setOptions] = useState(
     getDefaultOptions(minY, maxY, titleY, titleX)
@@ -31,23 +29,16 @@ const LineChart = (props: Props) => {
     ],
   };
 
-  const handleWindowChange = () => {
-    setOptions(getDefaultOptions(minY, maxY, titleY, titleX));
-  };
-
   useEffect(() => {
-    window.addEventListener('resize', handleWindowChange);
+    function handleResize() {
+      setOptions(getDefaultOptions(minY, maxY, titleY, titleX));
+    }
 
-    // return window.removeEventListener('resize', handleWindowChange);
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
   }, []);
 
-  return (
-    <Line
-      // style={{ width: '100%', height: '100%' }}
-      data={chartData}
-      options={options}
-    />
-  );
+  return <Line style={{ height: '100%' }} data={chartData} options={options} />;
 };
 
 export default LineChart;

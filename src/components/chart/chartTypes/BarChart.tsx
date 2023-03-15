@@ -7,10 +7,8 @@ import {
   colors,
 } from '../config';
 
-type Props = ChartProps & { xs?: number };
-
-const BarsChart = (props: Props) => {
-  const { dataX, dataY, minY, maxY, titleX, titleY, xs } = props;
+const BarsChart = (props: ChartProps) => {
+  const { dataX, dataY, minY, maxY, titleX, titleY } = props;
 
   const [options, setOptions] = useState(
     getDefaultOptions(minY, maxY, titleY, titleX)
@@ -28,23 +26,16 @@ const BarsChart = (props: Props) => {
     ],
   };
 
-  const handleWindowChange = () => {
-    setOptions(getDefaultOptions(minY, maxY, titleY, titleX));
-  };
-
   useEffect(() => {
-    window.addEventListener('resize', handleWindowChange);
+    function handleResize() {
+      setOptions(getDefaultOptions(minY, maxY, titleY, titleX));
+    }
 
-    return window.removeEventListener('resize', handleWindowChange);
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
   }, []);
 
-  return (
-    <Bar
-      // style={{ width: '100%', height: '100%' }}
-      data={data}
-      options={options}
-    />
-  );
+  return <Bar style={{ height: '100%' }} data={data} options={options} />;
 };
 
 export default BarsChart;
