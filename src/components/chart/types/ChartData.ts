@@ -1,14 +1,14 @@
 import {
-  ChartData,
+  ChartData as data,
   Point,
   BubbleController,
   ChartTypeRegistry,
 } from 'chart.js';
 
-type chartData<T extends keyof ChartTypeRegistry> = ChartData<
+type ChartData<T extends keyof ChartTypeRegistry> = data<
   T,
   (number | Point | [number, number] | BubbleController | null | string)[],
   unknown
 >;
 
-export default chartData;
+export default ChartData;
