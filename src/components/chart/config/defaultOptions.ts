@@ -20,11 +20,27 @@ const getDefaultOptions = (
         display: true,
         text: titleY,
         padding: {
-          bottom: 25,
+          bottom:
+            window.innerWidth > 1440
+              ? 25
+              : window.innerWidth > 1024
+              ? 15
+              : window.innerWidth > 768
+              ? 10
+              : 5,
         },
         font: {
           weight: 'bold',
-          size: 18,
+          size:
+            window.innerWidth > 1440
+              ? 20
+              : window.innerWidth > 1024
+              ? 18
+              : window.innerWidth > 768
+              ? 16
+              : window.innerWidth > 400
+              ? 14
+              : 12,
         },
       },
     },
@@ -34,11 +50,27 @@ const getDefaultOptions = (
         display: true,
         text: titleX,
         padding: {
-          top: 25,
+          top:
+            window.innerWidth > 1440
+              ? 25
+              : window.innerWidth > 1024
+              ? 15
+              : window.innerWidth > 768
+              ? 10
+              : 5,
         },
         font: {
           weight: 'bold',
-          size: 18,
+          size:
+            window.innerWidth > 1440
+              ? 20
+              : window.innerWidth > 1024
+              ? 18
+              : window.innerWidth > 768
+              ? 16
+              : window.innerWidth > 400
+              ? 14
+              : 12,
         },
       },
     },
