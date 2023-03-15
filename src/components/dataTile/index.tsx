@@ -1,12 +1,12 @@
 import './DataTile.scss';
 
-interface IDataTile {
+type Props = {
   children?: string;
   title?: string;
   theme?: 'blue' | 'green' | 'teal' | 'yellow';
-}
+};
 
-const DataTile = (props: IDataTile) => {
+const DataTile = (props: Props) => {
   const tileTheme = props.theme ?? 'blue';
   const defaultTitle = {
     blue: 'Aktualna temperatura',
