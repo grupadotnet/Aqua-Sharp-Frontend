@@ -7,7 +7,8 @@ type Props = {
 };
 
 const DataTile = (props: Props) => {
-  const tileTheme = props.theme ?? 'blue';
+  const {children, title, theme} = props;
+  const tileTheme = theme ?? 'blue';
   const defaultTitle = {
     blue: 'Aktualna temperatura',
     green: 'Aktualne ph wody',
@@ -16,8 +17,8 @@ const DataTile = (props: Props) => {
   };
   return (
     <div className={`tile tile-${tileTheme.toLowerCase()}`}>
-      <p>{props.title ?? defaultTitle[tileTheme]}</p>
-      <p>{props.children}</p>
+      <p>{title ?? defaultTitle[tileTheme]}</p>
+      <p>{children}</p>
     </div>
   );
 };
