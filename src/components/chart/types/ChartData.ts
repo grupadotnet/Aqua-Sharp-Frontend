@@ -1,8 +1,8 @@
 import {
-  ChartData as data,
-  Point,
   BubbleController,
+  ChartData as data,
   ChartTypeRegistry,
+  Point,
 } from 'chart.js';
 
 type ChartData<T extends keyof ChartTypeRegistry> = data<

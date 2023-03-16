@@ -1,5 +1,6 @@
 import { Route, Routes } from 'react-router-dom';
-import { Working } from './pages/working';
+
+import { Working } from '@/pages/working';
 
 function App() {
   return (
