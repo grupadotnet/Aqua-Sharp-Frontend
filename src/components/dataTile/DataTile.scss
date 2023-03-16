@@ -24,40 +24,38 @@
     p:first-child{
       color: colors.$green;
     }
+    &::before{
+      border-left: 0.25rem solid colors.$green;
+    }
   }
   &-teal {
     p:first-child{
       color: colors.$teal;
+    }
+    &::before{
+      border-left: 0.25rem solid colors.$teal;
     }
   }
   &-blue {
     p:first-child{
       color: colors.$primary;
     }
+    &::before{
+      border-left: 0.25rem solid colors.$primary;
+    }
   }
   &-yellow {
     p:first-child{
       color: colors.$yellow;
     }
+    &::before{
+      border-left: 0.25rem solid colors.$yellow;
+    }
   }
-}
-
-.tile::before{
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-left: 0.25rem solid colors.$primary;
-  border-radius: 0.35rem;
-}
-
-.tile-green::before{
-  border-left: 0.25rem solid colors.$green;
-}
-
-.tile-teal::before{
-  border-left: 0.25rem solid colors.$teal;
-}
-
-.tile-yellow::before{
-  border-left: 0.25rem solid colors.$yellow;
+  &::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 0.35rem;
+  }
 }
