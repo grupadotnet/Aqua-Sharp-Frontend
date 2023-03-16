@@ -78,10 +78,10 @@ export const Working: React.FC = () => {
         <DataTile theme='blue'>kolejna wartość</DataTile>
         <DataTile theme='yellow'>jakaś wartość</DataTile>
         <DataTile theme='teal'>2137</DataTile>
-        <DataTile theme='green' title='customowy tytuł 1'></DataTile>
-        <DataTile theme='blue' title='customowy tytuł 2'></DataTile>
-        <DataTile theme='yellow' title='customowy tytuł 3'></DataTile>
-        <DataTile theme='teal' title='customowy tytuł 4'></DataTile>
+        <DataTile theme='green' title='customowy tytuł 1'>abc</DataTile>
+        <DataTile theme='blue' title='customowy tytuł 2'>acb</DataTile>
+        <DataTile theme='yellow' title='customowy tytuł 3'>bca</DataTile>
+        <DataTile theme='teal' title='customowy tytuł 4'>bac</DataTile>
       </div>
       {/* data tile end */}
     </div>

@@ -1,7 +1,7 @@
 import './DataTile.scss';
 
 type Props = {
-  children?: string;
+  children: string;
   title?: string;
   theme?: 'blue' | 'green' | 'teal' | 'yellow';
 };
@@ -17,7 +17,7 @@ const DataTile = (props: Props) => {
   return (
     <div className={`tile tile-${tileTheme.toLowerCase()}`}>
       <p>{props.title ?? defaultTitle[tileTheme]}</p>
-      <p>{props.children ?? '???'}</p>
+      <p>{props.children}</p>
     </div>
   );
 };
