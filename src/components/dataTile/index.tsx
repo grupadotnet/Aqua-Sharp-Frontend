@@ -6,8 +6,7 @@ type Props = {
   theme?: 'blue' | 'green' | 'teal' | 'yellow';
 };
 
-const DataTile = (props: Props) => {
-  const {children, title, theme} = props;
+const DataTile = ({ children, title, theme }: Props) => {
   const tileTheme = theme ?? 'blue';
   const defaultTitle = {
     blue: 'Aktualna temperatura',
