@@ -17,11 +17,17 @@ module.exports = {
     sourceType: 'module',
     project: './tsconfig.json',
   },
-  plugins: ['react', '@typescript-eslint', 'prettier'],
+  plugins: ['react', '@typescript-eslint', 'prettier', 'simple-import-sort'],
   rules: {
     'react/react-in-jsx-scope': 0,
     'prettier/prettier': 0,
     '@typescript-eslint/no-unused-vars': 'warn',
     'react/prop-types': 'warn',
+    'simple-import-sort/imports': [
+      'error',
+      {
+        groups: [['^react'], ['^@?\\w'], ['@/(.*)'], ['^[./]']],
+      },
+    ],
   },
 };

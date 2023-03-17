@@ -1,13 +1,13 @@
+import { Col } from 'react-bootstrap';
 import { useTranslation } from 'react-i18next';
-import { languages } from '../../assets/languages';
-import i18next from 'i18next';
-import { BarChart, ChartWrapper, LineChart } from '../../components/chart';
-import { exampleData } from '../../components/chart/config';
 
 import { CategoryScale } from 'chart.js';
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { Chart as ChartJS } from 'chart.js/auto';
-import { Col } from 'react-bootstrap';
+import i18next from 'i18next';
+
+import { languages } from '@/assets/languages';
+import { BarChart, ChartWrapper, exampleData, LineChart } from '@/components';
 
 import './Working.scss';
 

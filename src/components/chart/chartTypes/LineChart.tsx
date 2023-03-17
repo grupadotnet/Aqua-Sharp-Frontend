@@ -1,10 +1,11 @@
 import { useEffect, useState } from 'react';
 import { Line } from 'react-chartjs-2';
+
 import {
-  getDefaultOptions,
-  getDefaultData,
   ChartData,
   colors,
+  getDefaultData,
+  getDefaultOptions,
 } from '../config';
 
 const LineChart = (props: ChartProps) => {

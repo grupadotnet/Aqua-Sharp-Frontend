@@ -1,4 +1,4 @@
-import { describe, it } from 'vitest';
+import { describe } from 'vitest';
 
 describe('App', () => {
   // TODO: Delete
