@@ -1,13 +1,19 @@
+import { Col } from 'react-bootstrap';
 import { useTranslation } from 'react-i18next';
-import { languages } from '../../assets/languages';
-import i18next from 'i18next';
-import { BarChart, ChartWrapper, LineChart } from '../../components/chart';
-import { exampleData } from '../../components/chart/config';
+
 import { CategoryScale } from 'chart.js';
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { Chart as ChartJS } from 'chart.js/auto';
-import DataTile from '../../components/dataTile';
-import { Col } from 'react-bootstrap';
+import i18next from 'i18next';
+
+import { languages } from '@/assets/languages';
+import {
+  BarChart,
+  ChartWrapper,
+  DataTile,
+  exampleData,
+  LineChart,
+} from '@/components';
 
 import './Working.scss';
 
@@ -73,15 +79,32 @@ export const Working: React.FC = () => {
       </ChartWrapper>
       {/* chart end */}
       {/* data tile start */}
-      <div style={{ margin: 'auto', width: '80%', display: 'flex', flexWrap: 'wrap', gap: '1em', justifyContent: 'center'}}>
-        <DataTile theme='green'>pH 7</DataTile>
-        <DataTile theme='blue'>kolejna wartość</DataTile>
-        <DataTile theme='yellow'>jakaś wartość</DataTile>
-        <DataTile theme='teal'>2137</DataTile>
-        <DataTile theme='green' title='customowy tytuł 1'>abc</DataTile>
-        <DataTile theme='blue' title='customowy tytuł 2'>acb</DataTile>
-        <DataTile theme='yellow' title='customowy tytuł 3'>bca</DataTile>
-        <DataTile theme='teal' title='customowy tytuł 4'>bac</DataTile>
+      <div
+        style={{
+          margin: 'auto',
+          width: '80%',
+          display: 'flex',
+          flexWrap: 'wrap',
+          gap: '1em',
+          justifyContent: 'center',
+        }}
+      >
+        <DataTile theme="green">pH 7</DataTile>
+        <DataTile theme="blue">kolejna wartość</DataTile>
+        <DataTile theme="yellow">jakaś wartość</DataTile>
+        <DataTile theme="teal">2137</DataTile>
+        <DataTile theme="green" title="customowy tytuł 1">
+          abc
+        </DataTile>
+        <DataTile theme="blue" title="customowy tytuł 2">
+          acb
+        </DataTile>
+        <DataTile theme="yellow" title="customowy tytuł 3">
+          bca
+        </DataTile>
+        <DataTile theme="teal" title="customowy tytuł 4">
+          bac
+        </DataTile>
       </div>
       {/* data tile end */}
     </div>
