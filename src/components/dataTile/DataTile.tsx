@@ -7,9 +7,8 @@ type Props = {
 };
 
 const DataTile = ({ children, title, theme }: Props) => {
-  const tileTheme = theme;
   return (
-    <div className={`tile tile-${tileTheme}`}>
+    <div className={`tile tile-${theme}`}>
       <p>{title}</p>
       <p>{children}</p>
     </div>
