@@ -9,6 +9,7 @@ import i18next from 'i18next';
 import { languages } from '@/assets/languages';
 import {
   BarChart,
+  Button,
   ChartWrapper,
   DataTile,
   exampleData,
@@ -107,6 +108,12 @@ export const Working: React.FC = () => {
         </DataTile>
       </div>
       {/* data tile end */}
+      {/* button start */}
+      <Button variant="primary">primary</Button>
+      <Button variant="success">success</Button>
+      <Button variant="danger">danger</Button>
+      <Button variant="warning">warning</Button>
+      <Button variant="secondary">secondary</Button>
     </div>
   );
 };

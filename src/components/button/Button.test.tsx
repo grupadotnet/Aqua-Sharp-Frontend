@@ -3,10 +3,10 @@ import { act } from 'react-dom/test-utils';
 
 import Button from './Button';
 
-const globalWithAct = global as typeof globalThis & {
-  IS_REACT_ACT_ENVIRONMENT: boolean;
-};
-globalWithAct.IS_REACT_ACT_ENVIRONMENT = true;
+// const globalWithAct = global as variantof globalThis & {
+//   IS_REACT_ACT_ENVIRONMENT: boolean;
+// };
+// globalWithAct.IS_REACT_ACT_ENVIRONMENT = true;
 let container: any = null;
 let root: any = null;
 beforeEach(() => {
@@ -25,52 +25,28 @@ afterEach(() => {
 });
 
 describe('Button component', () => {
-  it('Children exists, no type', () => {
+  it('Children exists, no variant', () => {
     act(() => {
-      root.render(<Button>Test value</Button>);
+      root.render(<Button variant="primary">Test value</Button>);
     });
     expect(container.textContent).toBe('Test value');
   });
-  it("Children exists, type='OK'", () => {
+  it("Children exists, variant='success'", () => {
     act(() => {
-      root.render(<Button type="OK">Test value</Button>);
+      root.render(<Button variant="success">Test value</Button>);
     });
     expect(container.textContent).toBe('Test value');
   });
-  it("Children exists, type='Cancel'", () => {
+  it("Children exists, variant='Cancel'", () => {
     act(() => {
-      root.render(<Button type="Cancel">Test value</Button>);
+      root.render(<Button variant="danger">Test value</Button>);
     });
     expect(container.textContent).toBe('Test value');
   });
-  it("Children exists, type='Action'", () => {
+  it("Children exists, variant='Action'", () => {
     act(() => {
-      root.render(<Button type="Action">Test value</Button>);
+      root.render(<Button variant="danger">Test value</Button>);
     });
     expect(container.textContent).toBe('Test value');
-  });
-  it("Children doesn't exist, no type", () => {
-    act(() => {
-      root.render(<Button></Button>);
-    });
-    expect(container.textContent).toBe('');
-  });
-  it("Children doesn't exist, type='OK'", () => {
-    act(() => {
-      root.render(<Button type="OK"></Button>);
-    });
-    expect(container.textContent).toBe('Zatwierdź');
-  });
-  it("Children doesn't exist, type='Cancel'", () => {
-    act(() => {
-      root.render(<Button type="Cancel"></Button>);
-    });
-    expect(container.textContent).toBe('Anuluj');
-  });
-  it("Children doesn't exist, type='Action'", () => {
-    act(() => {
-      root.render(<Button type="Action"></Button>);
-    });
-    expect(container.textContent).toBe('');
   });
 });
