@@ -25,27 +25,27 @@ afterEach(() => {
 });
 
 describe('Button component', () => {
-  it('Children exists, no variant', () => {
+  it("variant='primary'", () => {
     act(() => {
       root.render(<Button variant="primary">Test value</Button>);
     });
     expect(container.textContent).toBe('Test value');
   });
-  it("Children exists, variant='success'", () => {
+  it("variant='success'", () => {
     act(() => {
       root.render(<Button variant="success">Test value</Button>);
     });
     expect(container.textContent).toBe('Test value');
   });
-  it("Children exists, variant='Cancel'", () => {
+  it("variant='danger'", () => {
     act(() => {
       root.render(<Button variant="danger">Test value</Button>);
     });
     expect(container.textContent).toBe('Test value');
   });
-  it("Children exists, variant='Action'", () => {
+  it("variant='warning'", () => {
     act(() => {
-      root.render(<Button variant="danger">Test value</Button>);
+      root.render(<Button variant="warning">Test value</Button>);
     });
     expect(container.textContent).toBe('Test value');
   });
