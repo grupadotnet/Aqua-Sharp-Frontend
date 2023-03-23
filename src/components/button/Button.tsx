@@ -1,22 +1,12 @@
-import './Button.scss';
+import Button from 'react-bootstrap/Button';
 
-interface IButton {
-  type?: 'OK' | 'Cancel' | 'Action';
-  children?: string;
-}
-
-const Button = (props: IButton) => {
-  const buttonType = props.type ?? 'Action';
-  const defaultChildren = {
-    OK: 'Zatwierdź',
-    Cancel: 'Anuluj',
-    Action: '',
-  };
-  return (
-    <button className={`button button-${buttonType.toLowerCase()}`}>
-      {props.children ?? defaultChildren[buttonType]}
-    </button>
-  );
+type Props = React.ComponentProps<typeof Button> & {
+  variant: 'success' | 'primary' | 'danger' | 'warning' | 'secondary';
+  children: string;
 };
 
-export default Button;
+const Btn = ({ children, ...passThroughProps }: Props) => (
+  <Button {...passThroughProps}>{children.toUpperCase()}</Button>
+);
+
+export default Btn;
