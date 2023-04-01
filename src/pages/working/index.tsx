@@ -14,9 +14,12 @@ import {
   DataTile,
   exampleData,
   LineChart,
+  LanguageDropdown,
 } from '@/components';
 
 import './Working.scss';
+
+
 
 export const Working: React.FC = () => {
   const { t } = useTranslation();
@@ -42,6 +45,9 @@ export const Working: React.FC = () => {
           </li>
         ))}
       </ul>
+      <LanguageDropdown></LanguageDropdown>
+      
+      
       {/* i18next end */}
       {/* chart start */}
       {/* wysokość wykresów będziemy definiowali za pomocą scss'a - podajemy nazwę klasy i tworzymy style dla wrappera w zależności od naszych aktualnych potrzeb */}
