@@ -8,7 +8,7 @@ import { CategoryScale } from 'chart.js';
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { Chart as ChartJS } from 'chart.js/auto';
 
-import LanguageButton from "../../components/dropdown";
+import LanguageDropdown from '../../components/languageDropdown';
 
 export const Working: React.FC = () => {
   const { t } = useTranslation();
@@ -34,7 +34,7 @@ export const Working: React.FC = () => {
           </li>
         ))}
       </ul>
-      <LanguageButton></LanguageButton>
+      <LanguageDropdown></LanguageDropdown>
       
       {/* i18next end */}
       {/* chart start */}
