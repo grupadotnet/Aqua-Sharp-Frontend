@@ -14,11 +14,12 @@ import {
   DataTile,
   exampleData,
   LineChart,
+  LanguageDropdown,
 } from '@/components';
 
 import './Working.scss';
 
-import LanguageDropdown from '../../components/languageDropdown';
+
 
 export const Working: React.FC = () => {
   const { t } = useTranslation();
@@ -45,6 +46,7 @@ export const Working: React.FC = () => {
         ))}
       </ul>
       <LanguageDropdown></LanguageDropdown>
+      
       
       {/* i18next end */}
       {/* chart start */}
