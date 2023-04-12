@@ -6,7 +6,9 @@ type Props = React.ComponentProps<typeof Button> & {
 };
 
 const Btn = ({ children, ...passThroughProps }: Props) => (
-  <Button {...passThroughProps}>{children.toUpperCase()}</Button>
+  <Button {...passThroughProps} className="rounded-pill">
+    {children.toUpperCase()}
+  </Button>
 );
 
 export default Btn;

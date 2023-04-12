@@ -1,4 +1,5 @@
-import { Col } from 'react-bootstrap';
+import { Col, Row } from 'react-bootstrap';
+import Form from 'react-bootstrap/Form';
 import { useTranslation } from 'react-i18next';
 
 import { CategoryScale } from 'chart.js';
@@ -12,14 +13,15 @@ import {
   Button,
   ChartWrapper,
   DataTile,
+  EmailInput,
   exampleData,
-  LineChart,
+  Input,
   LanguageDropdown,
+  LineChart,
+  PasswordInput,
 } from '@/components';
 
 import './Working.scss';
-
-
 
 export const Working: React.FC = () => {
   const { t } = useTranslation();
@@ -46,8 +48,7 @@ export const Working: React.FC = () => {
         ))}
       </ul>
       <LanguageDropdown></LanguageDropdown>
-      
-      
+
       {/* i18next end */}
       {/* chart start */}
       {/* wysokość wykresów będziemy definiowali za pomocą scss'a - podajemy nazwę klasy i tworzymy style dla wrappera w zależności od naszych aktualnych potrzeb */}
@@ -120,6 +121,28 @@ export const Working: React.FC = () => {
       <Button variant="danger">danger</Button>
       <Button variant="warning">warning</Button>
       <Button variant="secondary">secondary</Button>
+      {/* button end */}
+      {/* input start */}
+      <Row className="justify-content-md-center">
+        <Form>
+          <Form.Group controlId="formBasicLogin">
+            <Form.Label>Login</Form.Label>
+            <Input placeholder="Podaj login" />
+          </Form.Group>
+          <Form.Group controlId="formBasicEmail">
+            <Form.Label>Email</Form.Label>
+            <EmailInput placeholder="Podaj email" />
+          </Form.Group>
+          <Form.Group controlId="formBasicPassword">
+            <Form.Label>Hasło</Form.Label>
+            <PasswordInput placeholder="Podaj hasło" />
+          </Form.Group>
+          <Button variant="primary" type="submit">
+            Zaloguj
+          </Button>
+        </Form>
+      </Row>
+      {/* input end */}
     </div>
   );
 };
