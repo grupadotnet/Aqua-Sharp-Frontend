@@ -1,4 +1,5 @@
 {
   "welcome_to_react": "Witaj w React oraz react-i18next",
-  "variable_example": "Cześć, nazywam się {{name}}"
+  "variable_example": "Cześć, nazywam się {{name}}",
+  "footer_copyright": "AquaSharp - Koło Naukowe PIMI 2023"
 }
