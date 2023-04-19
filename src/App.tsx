@@ -1,7 +1,7 @@
 import { Navigate, Route, Routes } from 'react-router-dom';
 
-import { Working } from '@/pages/working';
 import { DashboardLayout } from '@/layout';
+import { Working } from '@/pages/working';
 
 function App() {
   return (
@@ -16,6 +16,18 @@ function App() {
             </DashboardLayout>
           }
         />
+        <Route path="/aquarium" element={<h1>Nowe akwarium</h1>} />
+        <Route
+          path="/aquarium/:id"
+          element={<h1>Szczegóły danego akwarium</h1>}
+        />
+        <Route
+          path="/aquarium/:id/measurements"
+          element={<h1>Historia pomiarów akwarium</h1>}
+        />
+        <Route path="/aquarium/:id/edit" element={<h1>Edycja akwarium</h1>} />
+        <Route path="/settings" element={<h1>Ustawienia</h1>} />
+        <Route path="/first-run" element={<h1>Pierwsze uruchomienie</h1>} />
         <Route path="*" element={<h1 className="p-3">404 NOT FOUND</h1>} />
       </Routes>
     </div>
