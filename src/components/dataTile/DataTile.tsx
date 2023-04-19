@@ -1,16 +1,16 @@
+import Card from 'react-bootstrap/Card';
+
 import './DataTile.scss';
 
 type Props = {
   children: string;
-  title?: string;
-  theme: 'blue' | 'green' | 'teal' | 'yellow';
+  theme: string;
 };
 
-const DataTile = ({ children, title, theme }: Props) => (
-  <div className={`tile tile-${theme}`}>
-    <p>{title}</p>
-    <p>{children}</p>
-  </div>
+const DataTile = ({ children, theme }: Props) => (
+  <Card body className={`border-left-primary`}>
+    {children}
+  </Card>
 );
 
 export default DataTile;
