@@ -87,33 +87,12 @@ export const Working: React.FC = () => {
       </ChartWrapper>
       {/* chart end */}
       {/* data tile start */}
-      <div
-        style={{
-          margin: 'auto',
-          width: '80%',
-          display: 'flex',
-          flexWrap: 'wrap',
-          gap: '1em',
-          justifyContent: 'center',
-        }}
-      >
-        <DataTile theme="green">pH 7</DataTile>
-        <DataTile theme="blue">kolejna wartość</DataTile>
-        <DataTile theme="yellow">jakaś wartość</DataTile>
-        <DataTile theme="teal">2137</DataTile>
-        <DataTile theme="green" title="customowy tytuł 1">
-          abc
-        </DataTile>
-        <DataTile theme="blue" title="customowy tytuł 2">
-          acb
-        </DataTile>
-        <DataTile theme="yellow" title="customowy tytuł 3">
-          bca
-        </DataTile>
-        <DataTile theme="teal" title="customowy tytuł 4">
-          bac
-        </DataTile>
-      </div>
+      <Row className="justify-content-md-center">
+        <DataTile theme="primary">Testowy children</DataTile>
+        <DataTile theme="success">Testowy children</DataTile>
+        <DataTile theme="info">Testowy children</DataTile>
+        <DataTile theme="warning">Testowy children</DataTile>
+      </Row>
       {/* data tile end */}
       {/* button start */}
       <Button variant="primary">primary</Button>
