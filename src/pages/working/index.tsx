@@ -19,6 +19,7 @@ import {
   LanguageDropdown,
   LineChart,
   PasswordInput,
+  Tile,
 } from '@/components';
 
 import './Working.scss';
@@ -86,14 +87,28 @@ export const Working: React.FC = () => {
         </Col>
       </ChartWrapper>
       {/* chart end */}
-      {/* data tile start */}
+      {/* tiles start */}
       <Row className="justify-content-md-center">
-        <DataTile theme="primary">Testowy children</DataTile>
-        <DataTile theme="success">Testowy children</DataTile>
-        <DataTile theme="info">Testowy children</DataTile>
-        <DataTile theme="warning">Testowy children</DataTile>
+        <Tile theme="primary">Testowy children</Tile>
+        <Tile theme="success">Testowy children</Tile>
+        <Tile theme="info">Testowy children</Tile>
+        <Tile theme="warning">Testowy children</Tile>
       </Row>
-      {/* data tile end */}
+      <Row className="justify-content-md-center">
+        <DataTile theme="primary" title="Jakiś Tytuł">
+          Przykładowa wartość
+        </DataTile>
+        <DataTile theme="success" title="earnings (ANNUAL)">
+          $215,000
+        </DataTile>
+        <DataTile theme="info" title="Temperatura mojego obiadu">
+          2137
+        </DataTile>
+        <DataTile theme="warning" title="Temperatura mojego obiadu">
+          5PLN
+        </DataTile>
+      </Row>
+      {/* tiles end */}
       {/* button start */}
       <Button variant="primary">primary</Button>
       <Button variant="success">success</Button>

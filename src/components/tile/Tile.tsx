@@ -1,7 +1,8 @@
+import { ReactElement } from 'react';
 import Card from 'react-bootstrap/Card';
 
 type Props = {
-  children: string;
+  children: string | ReactElement;
   theme:
     | 'primary'
     | 'secondary'
@@ -12,10 +13,10 @@ type Props = {
     | 'dark';
 };
 
-const DataTile = ({ children, theme }: Props) => (
+const Tile = ({ children, theme }: Props) => (
   <Card body className={`border-left-${theme}`}>
     {children}
   </Card>
 );
 
-export default DataTile;
+export default Tile;
