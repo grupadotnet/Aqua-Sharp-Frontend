@@ -13,10 +13,10 @@ type Props = {
     | 'dark';
 };
 
-const Tile = ({ children, theme }: Props) => (
+const Crd = ({ children, theme }: Props) => (
   <Card body className={`border-left-${theme}`}>
     {children}
   </Card>
 );
 
-export default Tile;
+export default Crd;

@@ -1,10 +1,10 @@
 import { Col, Container, Row } from 'react-bootstrap';
 
 import { Button } from '..';
-import Tile from './Tile';
+import Card from './Card';
 
 const LightControlTile = () => (
-  <Tile theme="warning">
+  <Card theme="warning">
     <Container className="p-3">
       <Row className="h3 mb-4">
         <Col className="mr-5">Kontrola światła</Col>
@@ -19,7 +19,7 @@ const LightControlTile = () => (
         </Col>
       </Row>
     </Container>
-  </Tile>
+  </Card>
 );
 
 export default LightControlTile;

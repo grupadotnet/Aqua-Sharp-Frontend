@@ -1,6 +1,6 @@
 import Stack from 'react-bootstrap/Stack';
 
-import Tile from './Tile';
+import Card from './Card';
 
 import './DataTile.scss';
 
@@ -18,14 +18,14 @@ type Props = {
 };
 
 const DataTile = ({ children, title, theme }: Props) => (
-  <Tile theme={`${theme}`}>
+  <Card theme={`${theme}`}>
     <Stack>
       <div className={`fs-6 fw-semibold text-${theme} text-uppercase mb-1`}>
         {title}
       </div>
       <div className="h5 mb-0 fw-semibold text-gray-800">{children}</div>
     </Stack>
-  </Tile>
+  </Card>
 );
 
 export default DataTile;

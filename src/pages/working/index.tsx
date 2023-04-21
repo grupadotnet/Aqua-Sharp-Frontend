@@ -11,6 +11,7 @@ import { languages } from '@/assets/languages';
 import {
   BarChart,
   Button,
+  Card,
   ChartWrapper,
   DataTile,
   EmailInput,
@@ -20,7 +21,6 @@ import {
   LightControlTile,
   LineChart,
   PasswordInput,
-  Tile,
 } from '@/components';
 
 import './Working.scss';
@@ -88,12 +88,12 @@ export const Working: React.FC = () => {
         </Col>
       </ChartWrapper>
       {/* chart end */}
-      {/* tiles start */}
+      {/* cards start */}
       <Row className="justify-content-md-center my-3">
-        <Tile theme="primary">Testowy children</Tile>
-        <Tile theme="success">Testowy children</Tile>
-        <Tile theme="info">Testowy children</Tile>
-        <Tile theme="warning">Testowy children</Tile>
+        <Card theme="primary">Testowy children</Card>
+        <Card theme="success">Testowy children</Card>
+        <Card theme="info">Testowy children</Card>
+        <Card theme="warning">Testowy children</Card>
       </Row>
       <Row className="justify-content-md-center my-3">
         <DataTile theme="primary" title="Jakiś Tytuł">
@@ -112,7 +112,7 @@ export const Working: React.FC = () => {
       <Row className="justify-content-md-center my-3">
         <LightControlTile />
       </Row>
-      {/* tiles end */}
+      {/* cards end */}
       {/* button start */}
       <Button variant="primary">primary</Button>
       <Button variant="success">success</Button>
