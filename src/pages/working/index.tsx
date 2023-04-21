@@ -17,6 +17,7 @@ import {
   exampleData,
   Input,
   LanguageDropdown,
+  LightControlTile,
   LineChart,
   PasswordInput,
   Tile,
@@ -107,6 +108,13 @@ export const Working: React.FC = () => {
         <DataTile theme="warning" title="Temperatura mojego obiadu">
           5PLN
         </DataTile>
+      </Row>
+      <Row className="justify-content-md-center">
+        <Col></Col>
+        <Col>
+          <LightControlTile />
+        </Col>
+        <Col></Col>
       </Row>
       {/* tiles end */}
       {/* button start */}

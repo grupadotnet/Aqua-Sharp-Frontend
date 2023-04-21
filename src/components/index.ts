@@ -10,3 +10,4 @@ export { default as PasswordInput } from './input/PasswordInput';
 export { default as EmailInput } from './input/EmailInput';
 export { default as Tile } from './tile/Tile';
 export { default as DataTile } from './tile/DataTile';
+export { default as LightControlTile } from './tile/LightControlTile';
