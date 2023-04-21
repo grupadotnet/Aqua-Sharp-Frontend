@@ -6,12 +6,12 @@ import Tile from './Tile';
 const LightControlTile = () => (
   <Tile theme="warning">
     <Container className="p-3">
-      <Row className="h4 mb-4">Kontrola światła</Row>
+      <Row className="h3 mb-4">Kontrola światła</Row>
       <Row>
-        <Col>
+        <Col className="d-flex flex-column">
           <Button variant="danger">Włącz</Button>
         </Col>
-        <Col>
+        <Col className="d-flex flex-column">
           <Button variant="success">Wyłącz</Button>
         </Col>
       </Row>
