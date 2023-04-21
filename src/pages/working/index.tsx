@@ -110,11 +110,7 @@ export const Working: React.FC = () => {
         </DataTile>
       </Row>
       <Row className="justify-content-md-center my-3">
-        <Col></Col>
-        <Col>
-          <LightControlTile />
-        </Col>
-        <Col></Col>
+        <LightControlTile />
       </Row>
       {/* tiles end */}
       {/* button start */}
