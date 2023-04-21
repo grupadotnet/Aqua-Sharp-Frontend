@@ -1,7 +1,7 @@
 import { createRoot } from 'react-dom/client';
 import { act } from 'react-dom/test-utils';
 
-import DataTile from './Tile';
+import DataTile from './DataTile';
 
 const globalWithAct = global as typeof globalThis & {
   IS_REACT_ACT_ENVIRONMENT: boolean;
@@ -25,100 +25,48 @@ afterEach(() => {
 });
 
 describe('DataTile component', () => {
-  it('No title, green theme', () => {
-    act(() => {
-      root.render(<DataTile theme="green">Test value</DataTile>);
-    });
-    expect(container.querySelector('p:first-child').textContent).toBe('');
-    expect(container.querySelector('p:nth-child(2)').textContent).toBe(
-      'Test value'
-    );
-  });
-  it('No title, teal theme', () => {
-    act(() => {
-      root.render(<DataTile theme="teal">Test value</DataTile>);
-    });
-    expect(container.querySelector('p:first-child').textContent).toBe('');
-    expect(container.querySelector('p:nth-child(2)').textContent).toBe(
-      'Test value'
-    );
-  });
-  it('No title, yellow theme', () => {
-    act(() => {
-      root.render(<DataTile theme="yellow">Test value</DataTile>);
-    });
-    expect(container.querySelector('p:first-child').textContent).toBe('');
-    expect(container.querySelector('p:nth-child(2)').textContent).toBe(
-      'Test value'
-    );
-  });
-  it('No title, blue theme', () => {
-    act(() => {
-      root.render(<DataTile theme="blue">Test value</DataTile>);
-    });
-    expect(container.querySelector('p:first-child').textContent).toBe('');
-    expect(container.querySelector('p:nth-child(2)').textContent).toBe(
-      'Test value'
-    );
-  });
-  it('Title exists, green theme', () => {
+  it('Success theme', () => {
     act(() => {
       root.render(
-        <DataTile theme="green" title="Test title">
-          Test value
+        <DataTile theme="success" title="Test">
+          123
         </DataTile>
       );
     });
-    expect(container.querySelector('p:first-child').textContent).toBe(
-      'Test title'
-    );
-    expect(container.querySelector('p:nth-child(2)').textContent).toBe(
-      'Test value'
-    );
+    expect(container.querySelector('.text-success').textContent).toBe('Test');
+    expect(container.querySelector('div:nth-child(2)').textContent).toBe('123');
   });
-  it('Title exists, teal theme', () => {
+  it('Info theme', () => {
     act(() => {
       root.render(
-        <DataTile theme="teal" title="Test title">
-          Test value
+        <DataTile theme="info" title="Test">
+          123
         </DataTile>
       );
     });
-    expect(container.querySelector('p:first-child').textContent).toBe(
-      'Test title'
-    );
-    expect(container.querySelector('p:nth-child(2)').textContent).toBe(
-      'Test value'
-    );
+    expect(container.querySelector('.text-info').textContent).toBe('Test');
+    expect(container.querySelector('div:nth-child(2)').textContent).toBe('123');
   });
-  it('Title exists, yellow theme', () => {
+  it('Warning theme', () => {
     act(() => {
       root.render(
-        <DataTile theme="yellow" title="Test title">
-          Test value
+        <DataTile theme="warning" title="Test">
+          123
         </DataTile>
       );
     });
-    expect(container.querySelector('p:first-child').textContent).toBe(
-      'Test title'
-    );
-    expect(container.querySelector('p:nth-child(2)').textContent).toBe(
-      'Test value'
-    );
+    expect(container.querySelector('.text-warning').textContent).toBe('Test');
+    expect(container.querySelector('div:nth-child(2)').textContent).toBe('123');
   });
-  it('Title exists, blue theme', () => {
+  it('Primary theme', () => {
     act(() => {
       root.render(
-        <DataTile theme="blue" title="Test title">
-          Test value
+        <DataTile theme="primary" title="Test">
+          123
         </DataTile>
       );
     });
-    expect(container.querySelector('p:first-child').textContent).toBe(
-      'Test title'
-    );
-    expect(container.querySelector('p:nth-child(2)').textContent).toBe(
-      'Test value'
-    );
+    expect(container.querySelector('.text-primary').textContent).toBe('Test');
+    expect(container.querySelector('div:nth-child(2)').textContent).toBe('123');
   });
 });
