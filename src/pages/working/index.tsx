@@ -89,13 +89,13 @@ export const Working: React.FC = () => {
       </ChartWrapper>
       {/* chart end */}
       {/* tiles start */}
-      <Row className="justify-content-md-center">
+      <Row className="justify-content-md-center my-3">
         <Tile theme="primary">Testowy children</Tile>
         <Tile theme="success">Testowy children</Tile>
         <Tile theme="info">Testowy children</Tile>
         <Tile theme="warning">Testowy children</Tile>
       </Row>
-      <Row className="justify-content-md-center">
+      <Row className="justify-content-md-center my-3">
         <DataTile theme="primary" title="Jakiś Tytuł">
           Przykładowa wartość
         </DataTile>
@@ -109,7 +109,7 @@ export const Working: React.FC = () => {
           5PLN
         </DataTile>
       </Row>
-      <Row className="justify-content-md-center">
+      <Row className="justify-content-md-center my-3">
         <Col></Col>
         <Col>
           <LightControlTile />
@@ -139,9 +139,11 @@ export const Working: React.FC = () => {
             <Form.Label>Hasło</Form.Label>
             <PasswordInput placeholder="Podaj hasło" />
           </Form.Group>
-          <Button variant="primary" type="submit">
-            Zaloguj
-          </Button>
+          <div className="d-flex flex-column my-3">
+            <Button variant="primary" type="submit">
+              Zaloguj
+            </Button>
+          </div>
         </Form>
       </Row>
       {/* input end */}
