@@ -10,7 +10,7 @@ export const Edit: React.FC = () => {
     <Form>
       <h3 className="mb-4">Konfigurowanie akwarium</h3>
       <Row>
-        <Col>
+        <Col md>
           <Tile title="Parametry">
             <Container className="px-3">
               <Row>
@@ -70,7 +70,7 @@ export const Edit: React.FC = () => {
             </Container>
           </Tile>
         </Col>
-        <Col className="mb-4">
+        <Col md className="mb-4">
           <Tile title="Wymiary akwarium">
             <Container className="px-3">
               <Row>
@@ -96,10 +96,10 @@ export const Edit: React.FC = () => {
                   <h4>Długość (cm)</h4>
                 </Form.Label>
                 <Row>
-                  <Col>
+                  <Col sm>
                     <Input placeholder="Długość (cm)" />
                   </Col>
-                  <Col></Col>
+                  <Col sm></Col>
                 </Row>
               </Form.Group>
             </Container>
