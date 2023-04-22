@@ -61,10 +61,10 @@ export const Edit: React.FC = () => {
                   <h4>Częstotliwość wykonywanych pomiarów (min)</h4>
                 </Form.Label>
                 <Row>
-                  <Col>
+                  <Col sm>
                     <Input placeholder="Częstotliwość (min)" />
                   </Col>
-                  <Col></Col>
+                  <Col sm></Col>
                 </Row>
               </Form.Group>
             </Container>
