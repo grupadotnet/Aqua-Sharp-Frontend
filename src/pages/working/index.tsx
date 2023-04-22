@@ -11,12 +11,14 @@ import { languages } from '@/assets/languages';
 import {
   BarChart,
   Button,
+  Card,
   ChartWrapper,
-  DataTile,
+  DataCard,
   EmailInput,
   exampleData,
   Input,
   LanguageDropdown,
+  LightControlCard,
   LineChart,
   PasswordInput,
   Tile,
@@ -87,35 +89,31 @@ export const Working: React.FC = () => {
         </Col>
       </ChartWrapper>
       {/* chart end */}
-      {/* data tile start */}
-      <div
-        style={{
-          margin: 'auto',
-          width: '80%',
-          display: 'flex',
-          flexWrap: 'wrap',
-          gap: '1em',
-          justifyContent: 'center',
-        }}
-      >
-        <DataTile theme="green">pH 7</DataTile>
-        <DataTile theme="blue">kolejna wartość</DataTile>
-        <DataTile theme="yellow">jakaś wartość</DataTile>
-        <DataTile theme="teal">2137</DataTile>
-        <DataTile theme="green" title="customowy tytuł 1">
-          abc
-        </DataTile>
-        <DataTile theme="blue" title="customowy tytuł 2">
-          acb
-        </DataTile>
-        <DataTile theme="yellow" title="customowy tytuł 3">
-          bca
-        </DataTile>
-        <DataTile theme="teal" title="customowy tytuł 4">
-          bac
-        </DataTile>
-      </div>
-      {/* data tile end */}
+      {/* cards start */}
+      <Row className="justify-content-md-center my-3">
+        <Card theme="primary">Testowy children</Card>
+        <Card theme="success">Testowy children</Card>
+        <Card theme="info">Testowy children</Card>
+        <Card theme="warning">Testowy children</Card>
+      </Row>
+      <Row className="justify-content-md-center my-3">
+        <DataCard theme="primary" title="Jakiś Tytuł">
+          Przykładowa wartość
+        </DataCard>
+        <DataCard theme="success" title="earnings (ANNUAL)">
+          $215,000
+        </DataCard>
+        <DataCard theme="info" title="Temperatura mojego obiadu">
+          2137
+        </DataCard>
+        <DataCard theme="warning" title="Temperatura mojego obiadu">
+          5PLN
+        </DataCard>
+      </Row>
+      <Row className="justify-content-md-center my-3">
+        <LightControlCard />
+      </Row>
+      {/* cards end */}
       {/* button start */}
       <Button variant="primary">primary</Button>
       <Button variant="success">success</Button>
@@ -138,9 +136,11 @@ export const Working: React.FC = () => {
             <Form.Label>Hasło</Form.Label>
             <PasswordInput placeholder="Podaj hasło" />
           </Form.Group>
-          <Button variant="primary" type="submit">
-            Zaloguj
-          </Button>
+          <div className="d-flex flex-column my-3">
+            <Button variant="primary" type="submit">
+              Zaloguj
+            </Button>
+          </div>
         </Form>
       </Row>
       <Tile title="Earnings Overview">

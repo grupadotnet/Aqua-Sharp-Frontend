@@ -1,4 +1,4 @@
-export {};
+export { };
 
 declare global {
   type ChartProps = {
@@ -9,4 +9,12 @@ declare global {
     titleX?: string;
     titleY?: string;
   };
+  type Theme =
+    'primary'
+    | 'secondary'
+    | 'success'
+    | 'info'
+    | 'warning'
+    | 'danger'
+    | 'dark';
 }
