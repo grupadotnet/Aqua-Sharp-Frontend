@@ -11,3 +11,4 @@ export { default as EmailInput } from './input/EmailInput';
 export { default as Card } from './card/Card';
 export { default as DataTile } from './card/DataTile';
 export { default as LightControlTile } from './card/LightControlTile';
+export { default as Tile } from './Tile/Tile';

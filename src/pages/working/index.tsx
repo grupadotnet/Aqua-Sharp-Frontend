@@ -21,6 +21,7 @@ import {
   LightControlTile,
   LineChart,
   PasswordInput,
+  Tile,
 } from '@/components';
 
 import './Working.scss';
@@ -142,6 +143,9 @@ export const Working: React.FC = () => {
           </div>
         </Form>
       </Row>
+      <Tile title="Earnings Overview">
+        <div>Siemano</div>
+      </Tile>
       {/* input end */}
     </div>
   );
