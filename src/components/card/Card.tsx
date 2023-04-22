@@ -13,10 +13,10 @@ type Props = {
     | 'dark';
 };
 
-const Crd = ({ children, theme }: Props) => (
+const DataCard = ({ children, theme }: Props) => (
   <Card body className={`border-left-${theme}`}>
     {children}
   </Card>
 );
 
-export default Crd;
+export default DataCard;
