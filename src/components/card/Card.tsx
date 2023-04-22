@@ -3,14 +3,7 @@ import Card from 'react-bootstrap/Card';
 
 type Props = {
   children: string | ReactElement;
-  theme:
-    | 'primary'
-    | 'secondary'
-    | 'success'
-    | 'info'
-    | 'warning'
-    | 'danger'
-    | 'dark';
+  theme: Theme;
 };
 
 const DataCard = ({ children, theme }: Props) => (

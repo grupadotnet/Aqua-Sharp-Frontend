@@ -1,7 +1,7 @@
 import Button from 'react-bootstrap/Button';
 
 type Props = React.ComponentProps<typeof Button> & {
-  variant: 'success' | 'primary' | 'danger' | 'warning' | 'secondary';
+  variant: Theme;
   children: string;
 };
 
