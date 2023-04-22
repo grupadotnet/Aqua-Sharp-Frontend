@@ -2,7 +2,7 @@ import Stack from 'react-bootstrap/Stack';
 
 import Card from './Card';
 
-import './DataTile.scss';
+import './DataCard.scss';
 
 type Props = {
   children: string;
@@ -17,7 +17,7 @@ type Props = {
     | 'dark';
 };
 
-const DataTile = ({ children, title, theme }: Props) => (
+const DataCard = ({ children, title, theme }: Props) => (
   <Card theme={`${theme}`}>
     <Stack>
       <div className={`fs-6 fw-semibold text-${theme} text-uppercase mb-1`}>
@@ -28,4 +28,4 @@ const DataTile = ({ children, title, theme }: Props) => (
   </Card>
 );
 
-export default DataTile;
+export default DataCard;

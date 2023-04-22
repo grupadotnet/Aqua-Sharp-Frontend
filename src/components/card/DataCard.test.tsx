@@ -1,7 +1,7 @@
 import { createRoot } from 'react-dom/client';
 import { act } from 'react-dom/test-utils';
 
-import DataTile from './DataTile';
+import DataCard from './DataCard';
 
 const globalWithAct = global as typeof globalThis & {
   IS_REACT_ACT_ENVIRONMENT: boolean;
@@ -24,13 +24,13 @@ afterEach(() => {
   });
 });
 
-describe('DataTile component', () => {
+describe('DataCard component', () => {
   it('Success theme', () => {
     act(() => {
       root.render(
-        <DataTile theme="success" title="Test">
+        <DataCard theme="success" title="Test">
           123
-        </DataTile>
+        </DataCard>
       );
     });
     expect(container.querySelector('.text-success').textContent).toBe('Test');
@@ -39,9 +39,9 @@ describe('DataTile component', () => {
   it('Info theme', () => {
     act(() => {
       root.render(
-        <DataTile theme="info" title="Test">
+        <DataCard theme="info" title="Test">
           123
-        </DataTile>
+        </DataCard>
       );
     });
     expect(container.querySelector('.text-info').textContent).toBe('Test');
@@ -50,9 +50,9 @@ describe('DataTile component', () => {
   it('Warning theme', () => {
     act(() => {
       root.render(
-        <DataTile theme="warning" title="Test">
+        <DataCard theme="warning" title="Test">
           123
-        </DataTile>
+        </DataCard>
       );
     });
     expect(container.querySelector('.text-warning').textContent).toBe('Test');
@@ -61,9 +61,9 @@ describe('DataTile component', () => {
   it('Primary theme', () => {
     act(() => {
       root.render(
-        <DataTile theme="primary" title="Test">
+        <DataCard theme="primary" title="Test">
           123
-        </DataTile>
+        </DataCard>
       );
     });
     expect(container.querySelector('.text-primary').textContent).toBe('Test');

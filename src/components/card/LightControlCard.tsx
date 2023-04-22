@@ -3,7 +3,7 @@ import { Col, Container, Row } from 'react-bootstrap';
 import { Button } from '..';
 import Card from './Card';
 
-const LightControlTile = () => (
+const LightControlCard = () => (
   <Card theme="warning">
     <Container className="p-3">
       <Row className="h3 mb-4">
@@ -22,4 +22,4 @@ const LightControlTile = () => (
   </Card>
 );
 
-export default LightControlTile;
+export default LightControlCard;

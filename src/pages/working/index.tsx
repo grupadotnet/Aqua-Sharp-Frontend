@@ -13,12 +13,12 @@ import {
   Button,
   Card,
   ChartWrapper,
-  DataTile,
+  DataCard,
   EmailInput,
   exampleData,
   Input,
   LanguageDropdown,
-  LightControlTile,
+  LightControlCard,
   LineChart,
   PasswordInput,
   Tile,
@@ -97,21 +97,21 @@ export const Working: React.FC = () => {
         <Card theme="warning">Testowy children</Card>
       </Row>
       <Row className="justify-content-md-center my-3">
-        <DataTile theme="primary" title="Jakiś Tytuł">
+        <DataCard theme="primary" title="Jakiś Tytuł">
           Przykładowa wartość
-        </DataTile>
-        <DataTile theme="success" title="earnings (ANNUAL)">
+        </DataCard>
+        <DataCard theme="success" title="earnings (ANNUAL)">
           $215,000
-        </DataTile>
-        <DataTile theme="info" title="Temperatura mojego obiadu">
+        </DataCard>
+        <DataCard theme="info" title="Temperatura mojego obiadu">
           2137
-        </DataTile>
-        <DataTile theme="warning" title="Temperatura mojego obiadu">
+        </DataCard>
+        <DataCard theme="warning" title="Temperatura mojego obiadu">
           5PLN
-        </DataTile>
+        </DataCard>
       </Row>
       <Row className="justify-content-md-center my-3">
-        <LightControlTile />
+        <LightControlCard />
       </Row>
       {/* cards end */}
       {/* button start */}
