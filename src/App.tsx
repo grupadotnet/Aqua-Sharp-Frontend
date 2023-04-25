@@ -1,6 +1,7 @@
 import { Navigate, Route, Routes } from 'react-router-dom';
 
 import { DashboardLayout } from '@/layout';
+import { Edit } from '@/pages/edit';
 import { Settings } from '@/pages/settings';
 import { Working } from '@/pages/working';
 
@@ -26,7 +27,14 @@ function App() {
           path="/aquarium/:id/measurements"
           element={<h1>Historia pomiarów akwarium</h1>}
         />
-        <Route path="/aquarium/:id/edit" element={<h1>Edycja akwarium</h1>} />
+        <Route
+          path="/aquarium/:id/edit"
+          element={
+            <DashboardLayout>
+              <Edit />
+            </DashboardLayout>
+          }
+        />
         <Route
           path="/settings"
           element={
