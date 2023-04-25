@@ -14,45 +14,45 @@ export const Settings: React.FC = () => {
   const { t } = useTranslation();
   return (
     <Container>
-      <h3 className="mb-4">Profil</h3>
+      <h3 className="mb-4">{t('profile')}</h3>
       <Row>
         <Col md>
-          <Tile title="Zmiana hasła">
+          <Tile title={t('password_change')}>
             <Form className="px-3">
               <div className="d-flex flex-column my-3 px-auto">
                 <Form.Group controlId="oldPassword" className="my-2">
-                  <PasswordInput placeholder="Stare hasło" />
+                  <PasswordInput placeholder={t('old_password')} />
                 </Form.Group>
                 <Form.Group controlId="newPassword" className="my-2">
-                  <PasswordInput placeholder="Nowe hasło" />
+                  <PasswordInput placeholder={t('new_password')} />
                 </Form.Group>
                 <Form.Group controlId="rePassword" className="my-2">
-                  <PasswordInput placeholder="Powtórz hasło" />
+                  <PasswordInput placeholder={t('repeat_password')} />
                 </Form.Group>
                 <div className="my-2"></div>
                 <Button variant="success" type="submit">
-                  Zmień hasło
+                  {t('change_password')}
                 </Button>
               </div>
             </Form>
           </Tile>
         </Col>
         <Col md className="mb-4">
-          <Tile title="Zmiana pytania kontrolnego">
+          <Tile title={t('control_question_change')}>
             <Form className="px-3">
               <div className="d-flex flex-column my-3 px-auto">
                 <Form.Group controlId="password" className="my-2">
-                  <PasswordInput placeholder="Hasło" />
+                  <PasswordInput placeholder={t('password')} />
                 </Form.Group>
                 <Form.Group controlId="question" className="my-2">
-                  <Input placeholder="Pytanie" />
+                  <Input placeholder={t('question')} />
                 </Form.Group>
                 <Form.Group controlId="answer" className="my-2">
-                  <Input placeholder="Odpowiedź" />
+                  <Input placeholder={t('answer')} />
                 </Form.Group>
                 <div className="my-2"></div>
                 <Button variant="success" type="submit">
-                  Zmień pytanie
+                  {t('change_question')}
                 </Button>
               </div>
             </Form>
@@ -61,7 +61,7 @@ export const Settings: React.FC = () => {
       </Row>
       <Row>
         <Col xs="auto">
-          <Tile title="Język">
+          <Tile title={t('language')}>
             <div className="mr-5">
               <LanguageDropdown />
             </div>

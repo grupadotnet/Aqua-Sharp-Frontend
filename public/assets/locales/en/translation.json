@@ -1,5 +1,18 @@
 {
   "welcome_to_react": "Welcome to React and react-i18next",
   "variable_example": "Hi, my name is {{name}}",
-  "AquaSharp - Scientific Circle PIMI 2023": "AquaSharp - Scientific Circle PIMI 2023"
+  "AquaSharp - Scientific Circle PIMI 2023": "AquaSharp - Scientific Circle PIMI 2023",
+  "profile": "Profile",
+  "password_change": "Password change",
+  "old_password": "Old password",
+  "new_password": "New password",
+  "repeat_password": "Repeat password",
+  "change_password": "Change password",
+  "control_question_change": "Control question change",
+  "password": "Password",
+  "question": "Question",
+  "answer": "Answer",
+  "change_question": "Change question",
+  "language": "Language",
+  "select_language": "Select language"
 }
