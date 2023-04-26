@@ -2,7 +2,7 @@ import { Navigate, Route, Routes } from 'react-router-dom';
 
 import { DashboardLayout } from '@/layout';
 import { Edit } from '@/pages/edit';
-import { New } from '@/pages/new';
+import { NewAquariumView } from '@/pages/newAquarium';
 import { Settings } from '@/pages/settings';
 import { Working } from '@/pages/working';
 
@@ -20,10 +20,10 @@ function App() {
           }
         />
         <Route
-          path="/aquarium"
+          path="/newAquarium"
           element={
             <DashboardLayout>
-              <New />
+              <NewAquariumView />
             </DashboardLayout>
           }
         />

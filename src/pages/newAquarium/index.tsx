@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next';
 
 import { Button, Card, Input, Tile } from '@/components';
 
-export const New: React.FC = () => {
+export const NewAquariumView: React.FC = () => {
   const { t } = useTranslation();
   return (
     <Form>
