@@ -2,6 +2,7 @@ import { Navigate, Route, Routes } from 'react-router-dom';
 
 import { DashboardLayout } from '@/layout';
 import { Edit } from '@/pages/edit';
+import { New } from '@/pages/new';
 import { Settings } from '@/pages/settings';
 import { Working } from '@/pages/working';
 
@@ -18,7 +19,14 @@ function App() {
             </DashboardLayout>
           }
         />
-        <Route path="/aquarium" element={<h1>Nowe akwarium</h1>} />
+        <Route
+          path="/aquarium"
+          element={
+            <DashboardLayout>
+              <New />
+            </DashboardLayout>
+          }
+        />
         <Route
           path="/aquarium/:id"
           element={<h1>Szczegóły danego akwarium</h1>}
