@@ -13,3 +13,4 @@ export { default as DataCard } from './card/DataCard';
 export { default as LightControlCard } from './card/LightControlCard';
 export { default as Tile } from './Tile/Tile';
 export { default as Title } from './title/Title';
+export { default as InputGroup } from './input/InputGroup';

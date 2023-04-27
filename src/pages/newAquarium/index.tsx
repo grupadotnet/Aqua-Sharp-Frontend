@@ -2,7 +2,7 @@ import { Col, Container, Row } from 'react-bootstrap';
 import Form from 'react-bootstrap/Form';
 import { useTranslation } from 'react-i18next';
 
-import { Button, Card, Input, Tile, Title } from '@/components';
+import { Button, Card, Input, InputGroup, Tile, Title } from '@/components';
 
 export const NewAquariumView: React.FC = () => {
   const { t } = useTranslation();
@@ -15,30 +15,27 @@ export const NewAquariumView: React.FC = () => {
             <Container className="px-3">
               <Row>
                 <Col>
-                  <Form.Group controlId="aquariumName">
-                    <Form.Label className="mt-2">
-                      <h4>{t('aquarium_name')}</h4>
-                    </Form.Label>
+                  <InputGroup
+                    controlId="aquariumName"
+                    label={t('aquarium_name')}
+                  >
                     <Input placeholder={t('name')} />
-                  </Form.Group>
+                  </InputGroup>
                 </Col>
               </Row>
               <Row>
                 <Col>
-                  <Form.Group controlId="temperature">
-                    <Form.Label className="mt-3">
-                      <h4>{t('water_temperature')}</h4>
-                    </Form.Label>
+                  <InputGroup
+                    controlId="temperature"
+                    label={t('water_temperature')}
+                  >
                     <Input placeholder={t('temperature')} />
-                  </Form.Group>
+                  </InputGroup>
                 </Col>
                 <Col>
-                  <Form.Group controlId="targetPh">
-                    <Form.Label className="mt-3">
-                      <h4>{t('target_water_ph')}</h4>
-                    </Form.Label>
+                  <InputGroup controlId="targetPh" label={t('target_water_ph')}>
                     <Input placeholder={t('water_ph')} />
-                  </Form.Group>
+                  </InputGroup>
                 </Col>
               </Row>
               <Form.Label className="mt-3">
@@ -75,33 +72,24 @@ export const NewAquariumView: React.FC = () => {
             <Container className="px-3">
               <Row>
                 <Col>
-                  <Form.Group controlId="width">
-                    <Form.Label className="mt-3">
-                      <h4>{t('width')}</h4>
-                    </Form.Label>
+                  <InputGroup controlId="width" label={t('width')}>
                     <Input placeholder={t('width')} />
-                  </Form.Group>
+                  </InputGroup>
                 </Col>
                 <Col>
-                  <Form.Group controlId="height">
-                    <Form.Label className="mt-3">
-                      <h4>{t('height')}</h4>
-                    </Form.Label>
+                  <InputGroup controlId="height" label={t('height')}>
                     <Input placeholder={t('height')} />
-                  </Form.Group>
+                  </InputGroup>
                 </Col>
               </Row>
-              <Form.Group controlId="length">
-                <Form.Label className="mt-3">
-                  <h4>{t('length')}</h4>
-                </Form.Label>
-                <Row>
-                  <Col sm>
+              <Row>
+                <Col>
+                  <InputGroup controlId="length" label={t('length')}>
                     <Input placeholder={t('length')} />
-                  </Col>
-                  <Col sm></Col>
-                </Row>
-              </Form.Group>
+                  </InputGroup>
+                </Col>
+                <Col></Col>
+              </Row>
             </Container>
           </Tile>
           <Card theme="primary">
