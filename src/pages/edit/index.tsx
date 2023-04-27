@@ -2,13 +2,13 @@ import { Col, Container, Row } from 'react-bootstrap';
 import Form from 'react-bootstrap/Form';
 import { useTranslation } from 'react-i18next';
 
-import { Button, Card, Input, Tile } from '@/components';
+import { Button, Card, Input, Tile, Title } from '@/components';
 
 export const Edit: React.FC = () => {
   const { t } = useTranslation();
   return (
     <Form>
-      <h3 className="mb-4">{t('aquarium_setup')}</h3>
+      <Title title={t('aquarium_setup')} />
       <Row>
         <Col md>
           <Tile title={t('parameters')}>

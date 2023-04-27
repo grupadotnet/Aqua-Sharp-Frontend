@@ -8,13 +8,14 @@ import {
   LanguageDropdown,
   PasswordInput,
   Tile,
+  Title,
 } from '@/components';
 
 export const Settings: React.FC = () => {
   const { t } = useTranslation();
   return (
     <Container>
-      <h3 className="mb-4">{t('profile')}</h3>
+      <Title title={t('profile')} />
       <Row>
         <Col md>
           <Tile title={t('password_change')}>
