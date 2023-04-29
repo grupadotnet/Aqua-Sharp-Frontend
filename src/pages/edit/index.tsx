@@ -71,39 +71,6 @@ export const Edit: React.FC = () => {
           </Tile>
         </Col>
         <Col md className="mb-4">
-          <Tile title={t('aquarium_dimensions')}>
-            <Container className="px-3">
-              <Row>
-                <Col>
-                  <Form.Group controlId="width">
-                    <Form.Label className="mt-3">
-                      <h4>{t('width')}</h4>
-                    </Form.Label>
-                    <Input placeholder={t('width')} />
-                  </Form.Group>
-                </Col>
-                <Col>
-                  <Form.Group controlId="height">
-                    <Form.Label className="mt-3">
-                      <h4>{t('height')}</h4>
-                    </Form.Label>
-                    <Input placeholder={t('height')} />
-                  </Form.Group>
-                </Col>
-              </Row>
-              <Form.Group controlId="length">
-                <Form.Label className="mt-3">
-                  <h4>{t('length')}</h4>
-                </Form.Label>
-                <Row>
-                  <Col sm>
-                    <Input placeholder={t('length')} />
-                  </Col>
-                  <Col sm></Col>
-                </Row>
-              </Form.Group>
-            </Container>
-          </Tile>
           <Card theme="primary">
             <>
               <h5 className="pt-3">{t('changes_prompt')}</h5>
