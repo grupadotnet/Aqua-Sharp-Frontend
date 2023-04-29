@@ -9,3 +9,5 @@ export { default as LanguageDropdown } from './languageDropdown/LanguageDropdown
 export { default as Input } from './input/Input'
 export { default as PasswordInput } from './input/PasswordInput'
 export { default as EmailInput } from './input/EmailInput'
+export { default as UploadButton} from './other_buttons/upload_button'
+export { default as DownloadButton} from './other_buttons/download_button'

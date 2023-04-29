@@ -13,12 +13,14 @@ import {
   Button,
   ChartWrapper,
   DataTile,
+  DownloadButton,
   EmailInput,
   exampleData,
   Input,
   LanguageDropdown,
   LineChart,
   PasswordInput,
+  UploadButton,
 } from '@/components';
 
 import './Working.scss';
@@ -121,6 +123,9 @@ export const Working: React.FC = () => {
       <Button variant="danger">danger</Button>
       <Button variant="warning">warning</Button>
       <Button variant="secondary">secondary</Button>
+      <UploadButton></UploadButton>
+      <DownloadButton></DownloadButton>
+
       {/* button end */}
       {/* input start */}
       <Row className="justify-content-md-center">
