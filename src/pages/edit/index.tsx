@@ -68,30 +68,6 @@ export const Edit: React.FC = () => {
           </Tile>
         </Col>
         <Col md className="mb-4">
-          <Tile title={t('aquarium_dimensions')}>
-            <Container className="px-3">
-              <Row>
-                <Col>
-                  <InputGroup controlId="width" label={t('width')}>
-                    <Input placeholder={t('width')} />
-                  </InputGroup>
-                </Col>
-                <Col>
-                  <InputGroup controlId="height" label={t('height')}>
-                    <Input placeholder={t('height')} />
-                  </InputGroup>
-                </Col>
-              </Row>
-              <Row>
-                <Col>
-                  <InputGroup controlId="length" label={t('length')}>
-                    <Input placeholder={t('length')} />
-                  </InputGroup>
-                </Col>
-                <Col></Col>
-              </Row>
-            </Container>
-          </Tile>
           <Card theme="primary">
             <>
               <h5 className="pt-3">{t('changes_prompt')}</h5>
