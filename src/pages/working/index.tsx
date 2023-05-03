@@ -1,5 +1,6 @@
 import { Col, Row } from 'react-bootstrap';
 import Form from 'react-bootstrap/Form';
+
 import { useTranslation } from 'react-i18next';
 
 import { CategoryScale } from 'chart.js';
@@ -25,6 +26,7 @@ import {
 } from '@/components';
 
 import './Working.scss';
+import { Sidebar } from '../../components/sidebar';
 
 export const Working: React.FC = () => {
   const { t } = useTranslation();
@@ -35,6 +37,7 @@ export const Working: React.FC = () => {
 
   return (
     <div>
+      <Sidebar></Sidebar>
       {/* i18next start */}
       <h1>{t('welcome_to_react')}</h1>
       <p>{t('variable_example', { name })}</p>
