@@ -16,7 +16,6 @@ import {
   DataCard,
   EmailInput,
   exampleData,
-  Header,
   Input,
   LanguageDropdown,
   LightControlCard,
