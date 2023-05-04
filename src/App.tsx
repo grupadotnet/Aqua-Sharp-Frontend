@@ -13,7 +13,7 @@ function App() {
         <Route
           path="/dashboard"
           element={
-            <DashboardLayout>
+            <DashboardLayout username="uzytkownik testowy">
               <Working />
             </DashboardLayout>
           }
@@ -30,7 +30,7 @@ function App() {
         <Route
           path="/aquarium/:id/edit"
           element={
-            <DashboardLayout>
+            <DashboardLayout username="testowy">
               <Edit />
             </DashboardLayout>
           }
@@ -38,7 +38,7 @@ function App() {
         <Route
           path="/settings"
           element={
-            <DashboardLayout>
+            <DashboardLayout username="test">
               <Settings />
             </DashboardLayout>
           }

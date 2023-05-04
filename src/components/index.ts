@@ -12,3 +12,4 @@ export { default as Card } from './card/Card';
 export { default as DataCard } from './card/DataCard';
 export { default as LightControlCard } from './card/LightControlCard';
 export { default as Tile } from './tile/Tile';
+export { default as Header } from './header/Header';
