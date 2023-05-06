@@ -11,8 +11,8 @@ type Props = FormGroupProps & {
 
 const InputGroup = ({ label, children, ...props }: Props) => (
   <Form.Group {...props}>
-    <Form.Label className="mt-2">
-      <h4>{label}</h4>
+    <Form.Label className="mt-4 mb-0">
+      <h5>{label}</h5>
     </Form.Label>
     {children}
   </Form.Group>

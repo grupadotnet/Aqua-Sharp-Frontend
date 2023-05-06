@@ -38,8 +38,8 @@ export const Edit: React.FC = () => {
                   </InputGroup>
                 </Col>
               </Row>
-              <Form.Label className="mt-3">
-                <h4>{t('lights_on_time_interval')}</h4>
+              <Form.Label className="mt-4 mb-0">
+                <h5>{t('lights_on_time_interval')}</h5>
               </Form.Label>
               <Row>
                 <Col>
@@ -54,8 +54,8 @@ export const Edit: React.FC = () => {
                 </Col>
               </Row>
               <Form.Group controlId="frequency">
-                <Form.Label className="mt-3">
-                  <h4>{t('measurements_frequency')}</h4>
+                <Form.Label className="mt-4 mb-0">
+                  <h5>{t('measurements_frequency')}</h5>
                 </Form.Label>
                 <Row>
                   <Col sm>
