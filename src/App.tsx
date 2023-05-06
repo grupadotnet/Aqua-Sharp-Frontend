@@ -9,7 +9,7 @@ import { Working } from '@/pages/working';
 function App() {
   return (
     <div>
-      <DashboardLayout>
+      <DashboardLayout username="wiktor">
         <Routes>
           <Route path="/" element={<Navigate to="/dashboard" />} />
           <Route path="/dashboard" element={<Working />} />
