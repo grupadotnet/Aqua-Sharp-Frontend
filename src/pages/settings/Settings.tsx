@@ -11,35 +11,35 @@ import {
   Title,
 } from '@/components';
 
-export const Settings: React.FC = () => {
+const Settings = () => {
   const { t } = useTranslation();
   return (
     <Container>
       <Title title={t('profile')} />
       <Row>
         <Col md>
-          <Tile title={t('password_change')}>
+          <Tile title={t('password change')}>
             <Form className="px-3">
               <div className="d-flex flex-column my-3 px-auto">
                 <Form.Group controlId="oldPassword" className="my-2">
-                  <PasswordInput placeholder={t('old_password')} />
+                  <PasswordInput placeholder={t('old password')} />
                 </Form.Group>
                 <Form.Group controlId="newPassword" className="my-2">
-                  <PasswordInput placeholder={t('new_password')} />
+                  <PasswordInput placeholder={t('new password')} />
                 </Form.Group>
                 <Form.Group controlId="rePassword" className="my-2">
-                  <PasswordInput placeholder={t('repeat_password')} />
+                  <PasswordInput placeholder={t('repeat password')} />
                 </Form.Group>
                 <div className="my-2"></div>
                 <Button variant="success" type="submit">
-                  {t('change_password')}
+                  {t('change password')}
                 </Button>
               </div>
             </Form>
           </Tile>
         </Col>
         <Col md className="mb-4">
-          <Tile title={t('control_question_change')}>
+          <Tile title={t('control question change')}>
             <Form className="px-3">
               <div className="d-flex flex-column my-3 px-auto">
                 <Form.Group controlId="password" className="my-2">
@@ -53,7 +53,7 @@ export const Settings: React.FC = () => {
                 </Form.Group>
                 <div className="my-2"></div>
                 <Button variant="success" type="submit">
-                  {t('change_question')}
+                  {t('change question')}
                 </Button>
               </div>
             </Form>
@@ -73,3 +73,5 @@ export const Settings: React.FC = () => {
     </Container>
   );
 };
+
+export default Settings;
