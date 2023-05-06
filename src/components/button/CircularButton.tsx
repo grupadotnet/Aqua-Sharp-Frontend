@@ -7,7 +7,7 @@ type Props = React.ComponentProps<typeof ButtonComponent> & {
 };
 
 const CircularButton = ({ children, ...passThroughProps }: Props) => (
-  <ButtonComponent {...passThroughProps} className="rounded-circle py-2 px-2.5">
+  <ButtonComponent {...passThroughProps} className="rounded-circle py-2">
     {children}
   </ButtonComponent>
 );
