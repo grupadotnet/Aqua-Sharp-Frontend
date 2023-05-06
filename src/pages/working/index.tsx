@@ -22,6 +22,7 @@ import {
   LineChart,
   PasswordInput,
   Tile,
+  Title,
 } from '@/components';
 
 import './Working.scss';
@@ -36,7 +37,7 @@ export const Working: React.FC = () => {
   return (
     <div>
       {/* i18next start */}
-      <h1>{t('welcome_to_react')}</h1>
+      <Title title={t('welcome_to_react')} />
       <p>{t('variable_example', { name })}</p>
 
       {/* LANGUAGE SWITCH WORKING VERSION */}
