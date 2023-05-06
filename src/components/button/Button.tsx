@@ -1,14 +1,14 @@
-import Button from 'react-bootstrap/Button';
+import { Button as ButtonComponent } from 'react-bootstrap';
 
-type Props = React.ComponentProps<typeof Button> & {
+type Props = React.ComponentProps<typeof ButtonComponent> & {
   variant: Theme;
   children: string;
 };
 
-const Btn = ({ children, ...passThroughProps }: Props) => (
-  <Button {...passThroughProps} className="rounded-pill p-3">
+const Button = ({ children, ...passThroughProps }: Props) => (
+  <ButtonComponent {...passThroughProps} className="rounded-pill p-3">
     {children}
-  </Button>
+  </ButtonComponent>
 );
 
-export default Btn;
+export default Button;
