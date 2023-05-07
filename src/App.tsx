@@ -5,8 +5,8 @@ import {
   Aquarium,
   Dashboard,
   Edit,
+  Error,
   NewAquarium,
-  PageNotFound,
   Settings,
   Working,
 } from '@/pages';
@@ -33,7 +33,7 @@ function App() {
             <Route path="/aquarium/:id/edit" element={<Edit />} />
             <Route path="/settings" element={<Settings />} />
             <Route path="/first-run" element={<h1>Pierwsze uruchomienie</h1>} />
-            <Route path="/404" element={<PageNotFound />} />
+            <Route path="/404" element={<Error statusCode={404} />} />
             <Route path="*" element={<Navigate to="/404" />} />
           </Routes>
         </DashboardLayout>
