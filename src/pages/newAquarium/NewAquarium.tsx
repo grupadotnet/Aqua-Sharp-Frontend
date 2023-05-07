@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next';
 
 import { Button, Card, Input, InputGroup, Tile, Title } from '@/components';
 
-const NewAquariumView = () => {
+const NewAquarium = () => {
   const { t } = useTranslation();
   return (
     <Form>
@@ -124,4 +124,4 @@ const NewAquariumView = () => {
   );
 };
 
-export default NewAquariumView;
+export default NewAquarium;
