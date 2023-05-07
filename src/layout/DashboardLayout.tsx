@@ -1,19 +1,22 @@
 import React from 'react';
-import { Container, Nav } from 'react-bootstrap';
+import { Container } from 'react-bootstrap';
 import { useTranslation } from 'react-i18next';
+
+import { Header } from '@/components';
 
 type Props = {
   children: React.ReactNode;
+  username: string;
 };
 
-const DashboardLayout = ({ children }: Props) => {
+const DashboardLayout = ({ children, username }: Props) => {
   const { t } = useTranslation();
   return (
     <div id="wrapper">
       <ul className="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion toggled"></ul>
       <div id="content-wrapper" className="d-flex flex-column">
         <div id="content">
-          <Nav className="bg-white topbar mb-4 static-top shadow"></Nav>
+          <Header username={username}></Header>
           <Container fluid>{children}</Container>
         </div>
         <footer className="sticky-footer bg-white">
