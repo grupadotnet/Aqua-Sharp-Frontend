@@ -1,0 +1,19 @@
+{
+  "name": "name",
+  "welcome to react": "welcome to react",
+  "variable example": "Hi, my name is {{name}}",
+  "AquaSharp - Scientific Circle PIMI 2023": "AquaSharp - Scientific Circle PIMI 2023",
+  "profile": "profile",
+  "password change": "password change",
+  "old password": "old password",
+  "new password": "new password",
+  "repeat password": "repeat password",
+  "change password": "change password",
+  "control question change": "control question change",
+  "password": "password",
+  "question": "question",
+  "answer": "answer",
+  "change question": "change question",
+  "language": "language",
+  "select language": "select language"
+}
