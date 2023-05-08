@@ -2,6 +2,8 @@ import { Col, Row } from 'react-bootstrap';
 import Form from 'react-bootstrap/Form';
 import { useTranslation } from 'react-i18next';
 
+import { faTrash, faUser, faX } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { CategoryScale } from 'chart.js';
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { Chart as ChartJS } from 'chart.js/auto';
@@ -13,6 +15,7 @@ import {
   Button,
   Card,
   ChartWrapper,
+  CircularButton,
   DataCard,
   EmailInput,
   exampleData,
@@ -148,6 +151,17 @@ const Working = () => {
         <div>Siemano</div>
       </Tile>
       {/* input end */}
+      {/* Circular Buttons start */}
+      <CircularButton variant="primary">
+        <FontAwesomeIcon icon={faTrash} />
+      </CircularButton>
+      <CircularButton variant="danger">
+        <FontAwesomeIcon icon={faUser} />
+      </CircularButton>
+      <CircularButton variant="success">
+        <FontAwesomeIcon icon={faX} />
+      </CircularButton>
+      {/* Circular Buttons end */}
     </div>
   );
 };
