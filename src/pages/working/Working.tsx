@@ -2,6 +2,8 @@ import { Col, Row } from 'react-bootstrap';
 import Form from 'react-bootstrap/Form';
 import { useTranslation } from 'react-i18next';
 
+import { faTrash, faUser, faX } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { CategoryScale } from 'chart.js';
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { Chart as ChartJS } from 'chart.js/auto';
@@ -13,6 +15,7 @@ import {
   Button,
   Card,
   ChartWrapper,
+  CircularButton,
   DataCard,
   EmailInput,
   exampleData,
@@ -27,7 +30,7 @@ import {
 
 import './Working.scss';
 
-export const Working: React.FC = () => {
+const Working = () => {
   const { t } = useTranslation();
 
   const name = 'Wiktor';
@@ -37,8 +40,8 @@ export const Working: React.FC = () => {
   return (
     <div>
       {/* i18next start */}
-      <Title title={t('welcome_to_react')} />
-      <p>{t('variable_example', { name })}</p>
+      <Title title={t('welcome to react')} />
+      <p>{t('variable example', { name })}</p>
 
       {/* LANGUAGE SWITCH WORKING VERSION */}
       <ul>
@@ -148,6 +151,19 @@ export const Working: React.FC = () => {
         <div>Siemano</div>
       </Tile>
       {/* input end */}
+      {/* Circular Buttons start */}
+      <CircularButton variant="primary">
+        <FontAwesomeIcon icon={faTrash} />
+      </CircularButton>
+      <CircularButton variant="danger">
+        <FontAwesomeIcon icon={faUser} />
+      </CircularButton>
+      <CircularButton variant="success">
+        <FontAwesomeIcon icon={faX} />
+      </CircularButton>
+      {/* Circular Buttons end */}
     </div>
   );
 };
+
+export default Working;

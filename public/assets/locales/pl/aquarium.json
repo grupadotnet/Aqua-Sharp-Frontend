@@ -1,0 +1,18 @@
+{
+  "water temperature": "Temperatura wody",
+  "target water ph": "Docelowe pH wody",
+  "temperature": "Temperatura",
+  "water ph": "pH wody",
+  "lights on time interval": "Przedział godzin włączonego światła",
+  "hour from": "Godzina od",
+  "hour to": "Godzina do",
+  "measurements frequency": "Częstotliwość wykonywanych pomiarów (min)",
+  "frequency": "Częstotliwość (min)",
+  "aquarium dimensions": "Wymiary akwarium",
+  "width": "Szerokość (cm)",
+  "height": "Wysokość (cm)",
+  "length": "Długość (cm)",
+  "aquarium setup": "Konfigurowanie akwarium",
+  "parameters": "Parametry",
+  "aquarium name": "Nazwa akwarium"
+}

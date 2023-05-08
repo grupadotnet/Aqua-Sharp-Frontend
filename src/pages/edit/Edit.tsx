@@ -11,70 +11,52 @@ import {
   Title,
 } from '@/components';
 
-import './NewAquarium.scss';
+import './Edit.scss';
 
-export const NewAquariumView: React.FC = () => {
+const Edit = () => {
   const { t } = useTranslation();
   return (
     <Form>
-      <Title title={t('aquarium_setup')} />
+      <Title title={t('aquarium setup', { ns: 'aquarium' })} />
       <Row>
-        <Col className="py-4" md>
+        <Col>
           <Tile header={t('parameters')}>
             <SingleInputGroup
               controlId="aquariumName"
               label={t('aquarium_name')}
               placeholder={t('name')}
             />
-            <Col className="gap-4 d-flex p-0">
+            <Col className="d-flex gap-4 p-0">
               <SingleInputGroup
                 controlId="temperature"
                 label={t('water_temperature')}
                 placeholder={t('temperature')}
               />
               <SingleInputGroup
+                placeholder={t('water_ph')}
                 controlId="targetPh"
                 label={t('target_water_ph')}
-                placeholder={t('water_ph')}
               />
             </Col>
             <DoubleInputGroup
               label={t('lights_on_time_interval')}
-              controlId="lightWorkingHours"
+              controlId="lightTime"
               placeholderLeft={t('hour_from')}
               placeholderRight={t('hour_to')}
             />
-
             <DoubleInputGroup
-              label={t('measurements_frequency')}
               controlId="frequency"
+              label={t('measurements_frequency')}
               placeholderLeft={t('frequency')}
             />
           </Tile>
         </Col>
-        <Col md className="mb-4">
-          <Tile header={t('aquarium_dimensions')}>
-            <Col className="gap-4 d-flex p-0">
-              <SingleInputGroup
-                controlId="width"
-                label={t('width')}
-                placeholder={t('width')}
-              />
-              <SingleInputGroup
-                controlId="height"
-                label={t('height')}
-                placeholder={t('height')}
-              />
-            </Col>
-            <DoubleInputGroup
-              controlId="length"
-              label={t('length')}
-              placeholderLeft={t('length')}
-            />
-          </Tile>
+        <Col>
           <Card theme="primary">
             <>
-              <h5 className="pt-3">{t('changes_prompt')}</h5>
+              <h5 className="pt-3">
+                {t('changes prompt', { ns: 'aquarium' })}
+              </h5>
               <div className="d-flex flex-column my-3 px-3 row-gap-3">
                 <Button variant="success" type="submit">
                   {t('apply')}
@@ -89,3 +71,5 @@ export const NewAquariumView: React.FC = () => {
     </Form>
   );
 };
+
+export default Edit;
