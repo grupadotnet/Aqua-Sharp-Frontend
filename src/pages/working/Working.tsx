@@ -147,7 +147,7 @@ const Working = () => {
           </div>
         </Form>
       </Row>
-      <Tile title="Earnings Overview">
+      <Tile header="Earnings Overview">
         <div>Siemano</div>
       </Tile>
       {/* input end */}

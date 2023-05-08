@@ -19,70 +19,72 @@ const NewAquarium = () => {
     <Form>
       <Title title={t('aquarium setup', { ns: 'aquarium' })} />
       <Row>
-        <Col className="py-4" md>
-          <Tile header={t('parameters')}>
+        <Col>
+          <Tile header={t('parameters', { ns: 'aquarium' })}>
             <SingleInputGroup
               controlId="aquariumName"
-              label={t('aquarium_name')}
+              label={t('aquarium name', { ns: 'aquarium' })}
               placeholder={t('name')}
             />
             <Col className="gap-4 d-flex p-0">
               <SingleInputGroup
                 controlId="temperature"
-                label={t('water_temperature')}
-                placeholder={t('temperature')}
+                label={t('water temperature', { ns: 'aquarium' })}
+                placeholder={t('temperature', { ns: 'aquarium' })}
               />
               <SingleInputGroup
                 controlId="targetPh"
-                label={t('target_water_ph')}
-                placeholder={t('water_ph')}
+                label={t('target water ph', { ns: 'aquarium' })}
+                placeholder={t('water ph', { ns: 'aquarium' })}
               />
             </Col>
             <DoubleInputGroup
-              label={t('lights_on_time_interval')}
+              label={t('lights on time interval', { ns: 'aquarium' })}
               controlId="lightWorkingHours"
-              placeholderLeft={t('hour_from')}
-              placeholderRight={t('hour_to')}
+              placeholderLeft={t('hour from', { ns: 'aquarium' })}
+              placeholderRight={t('hour to', { ns: 'aquarium' })}
             />
 
             <DoubleInputGroup
-              label={t('measurements_frequency')}
+              label={t('measurements frequency', { ns: 'aquarium' })}
               controlId="frequency"
-              placeholderLeft={t('frequency')}
+              placeholderLeft={t('frequency', { ns: 'aquarium' })}
             />
           </Tile>
         </Col>
-        <Col md className="mb-4">
-          <Tile header={t('aquarium_dimensions')}>
+        <Col>
+          <Tile header={t('aquarium dimensions', { ns: 'aquarium' })}>
             <Col className="gap-4 d-flex p-0">
               <SingleInputGroup
                 controlId="width"
-                label={t('width')}
-                placeholder={t('width')}
+                label={t('width', { ns: 'aquarium' })}
+                placeholder={t('width', { ns: 'aquarium' })}
               />
               <SingleInputGroup
                 controlId="height"
-                label={t('height')}
-                placeholder={t('height')}
+                label={t('height', { ns: 'aquarium' })}
+                placeholder={t('height', { ns: 'aquarium' })}
               />
             </Col>
             <DoubleInputGroup
               controlId="length"
-              label={t('length')}
-              placeholderLeft={t('length')}
+              label={t('length', { ns: 'aquarium' })}
+              placeholderLeft={t('length', { ns: 'aquarium' })}
             />
           </Tile>
           <Card theme="primary">
             <>
               <h5 className="pt-3">
-                {t('changes prompt', { ns: 'aquarium' })}
+                {t('changes prompt', { ns: 'configuration' })}
               </h5>
               <div className="d-flex flex-column my-3 px-3 row-gap-3">
                 <Button variant="success" type="submit">
-                  {t('apply')}
+                  {t('apply', { ns: 'configuration' })}
                 </Button>
                 <div className="my-2"></div>
-                <Button variant="danger">{t('cancel')}</Button>
+                <Button variant="danger">
+                  {t('cancel', { ns: 'configuration' })}
+                </Button>
               </div>
             </>
           </Card>
