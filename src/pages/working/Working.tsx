@@ -30,7 +30,7 @@ import {
 
 import './Working.scss';
 
-export const Working: React.FC = () => {
+const Working = () => {
   const { t } = useTranslation();
 
   const name = 'Wiktor';
@@ -40,8 +40,8 @@ export const Working: React.FC = () => {
   return (
     <div>
       {/* i18next start */}
-      <Title title={t('welcome_to_react')} />
-      <p>{t('variable_example', { name })}</p>
+      <Title title={t('welcome to react')} />
+      <p>{t('variable example', { name })}</p>
 
       {/* LANGUAGE SWITCH WORKING VERSION */}
       <ul>
@@ -165,3 +165,5 @@ export const Working: React.FC = () => {
     </div>
   );
 };
+
+export default Working;

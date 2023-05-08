@@ -5,7 +5,7 @@ import { useTranslation } from 'react-i18next';
 const LanguageDropdown = () => {
   const { t } = useTranslation();
   return (
-    <DropdownButton title={t('select_language')}>
+    <DropdownButton title={t('select language')}>
       <Dropdown.Item href="#/action-1">Polski</Dropdown.Item>
       <Dropdown.Item href="#/action-2">English</Dropdown.Item>
     </DropdownButton>

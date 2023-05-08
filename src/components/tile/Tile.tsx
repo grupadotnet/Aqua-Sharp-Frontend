@@ -1,11 +1,11 @@
 import React from 'react';
 
-interface TileProps {
+type Props = {
   title: string;
   children: React.ReactNode;
-}
+};
 
-const Tile: React.FC<TileProps> = ({ title, children }) => {
+const Tile = ({ title, children }: Props) => {
   return (
     <div className="card shadow mb-4">
       <div className="card-header py-3 d-flex flex-row align-items-center justify-content-between">

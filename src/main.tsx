@@ -20,6 +20,8 @@ i18n
   .use(LanguageDetector)
   .use(HttpApi)
   .init({
+    ns: ['common', 'aquarium', 'configuration', 'errors'],
+    defaultNS: 'common',
     supportedLngs: ['pl', 'en'],
     fallbackLng: 'en',
     detection: {
@@ -36,7 +38,7 @@ i18n
       // cookieDomain: our future domain,
     },
     backend: {
-      loadPath: '/assets/locales/{{lng}}/translation.json',
+      loadPath: '/assets/locales/{{lng}}/{{ns}}.json',
     },
   });
 
