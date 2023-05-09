@@ -1,12 +1,12 @@
 export const languages = [
   {
     code: 'pl',
-    name: 'Polish',
+    name: 'polish',
     country_code: 'pl',
   },
   {
     code: 'en',
-    name: 'English',
+    name: 'english',
     country_code: 'gb',
   },
 ];

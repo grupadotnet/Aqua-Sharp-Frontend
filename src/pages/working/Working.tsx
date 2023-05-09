@@ -7,9 +7,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { CategoryScale } from 'chart.js';
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { Chart as ChartJS } from 'chart.js/auto';
-import i18next from 'i18next';
 
-import { languages } from '@/assets/languages';
 import {
   BarChart,
   Button,
@@ -43,18 +41,7 @@ const Working = () => {
       <Title title={t('welcome to react')} />
       <p>{t('variable example', { name })}</p>
 
-      {/* LANGUAGE SWITCH WORKING VERSION */}
-      <ul>
-        {languages.map(({ code, name, country_code }) => (
-          <li key={country_code}>
-            <button onClick={() => i18next.changeLanguage(code)}>
-              <span className={`fi fi-${country_code}`}></span>
-              {name}
-            </button>
-          </li>
-        ))}
-      </ul>
-      <LanguageDropdown></LanguageDropdown>
+      <LanguageDropdown />
 
       {/* i18next end */}
       {/* chart start */}

@@ -15,5 +15,7 @@
   "answer": "Odpowiedź",
   "change question": "Zmień pytanie",
   "language": "Język",
-  "select language": "Wybierz Język"
+  "select language": "Wybierz Język",
+  "polish": "polski",
+  "english": "angielski"
 }
