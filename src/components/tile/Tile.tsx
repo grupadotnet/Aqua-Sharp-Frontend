@@ -1,18 +1,21 @@
 import React from 'react';
+import { Card } from 'react-bootstrap';
+
+import './Tile.scss';
 
 type Props = {
-  title: string;
+  header: string;
   children: React.ReactNode;
 };
 
-const Tile = ({ title, children }: Props) => {
+const Tile = ({ header, children }: Props) => {
   return (
-    <div className="card shadow mb-4">
-      <div className="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-        <h6 className="m-0 font-weight-bold text-primary">{title}</h6>
-      </div>
-      <div className="card-body">{children}</div>
-    </div>
+    <Card>
+      <Card.Header className="font-weight-bold text-primary">
+        {header}
+      </Card.Header>
+      <Card.Body className="d-flex flex-column gap-4">{children}</Card.Body>
+    </Card>
   );
 };
 

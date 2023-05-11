@@ -13,6 +13,7 @@ export { default as Card } from './card/Card';
 export { default as DataCard } from './card/DataCard';
 export { default as LightControlCard } from './card/LightControlCard';
 export { default as Title } from './title/Title';
+export { default as SingleInputGroup } from './inputGroup/SingleInputGroup';
+export { default as DoubleInputGroup } from './inputGroup/DoubleInputGroup';
 export { default as Tile } from './tile/Tile';
 export { default as Header } from './header/Header';
-export { default as InputGroup } from './input/InputGroup';
