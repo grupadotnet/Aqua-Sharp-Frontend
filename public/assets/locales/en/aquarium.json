@@ -1,0 +1,18 @@
+{
+  "water temperature": "water temperature",
+  "target water ph": "target water ph",
+  "temperature": "temperature",
+  "water ph": "water ph",
+  "lights on time interval": "lights on time interval",
+  "hour from": "hour from",
+  "hour to": "hour to",
+  "measurements frequency": "measurements frequency",
+  "frequency": "frequency",
+  "aquarium dimensions": "aquarium dimensions",
+  "width": "width (cm)",
+  "height": "height (cm)",
+  "length": "length (cm)",
+  "aquarium setup": "aquarium setup",
+  "parameters": "parameters",
+  "aquarium name": "aquarium name"
+}
