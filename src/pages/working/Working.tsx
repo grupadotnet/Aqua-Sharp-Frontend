@@ -3,17 +3,17 @@ import Form from 'react-bootstrap/Form';
 
 import { useTranslation } from 'react-i18next';
 
+import { faTrash, faUser, faX } from '@fortawesome/free-solid-svg-icons';
 import { CategoryScale } from 'chart.js';
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { Chart as ChartJS } from 'chart.js/auto';
-import i18next from 'i18next';
 
-import { languages } from '@/assets/languages';
 import {
   BarChart,
   Button,
   Card,
   ChartWrapper,
+  CircularButton,
   DataCard,
   EmailInput,
   exampleData,
@@ -23,12 +23,13 @@ import {
   LineChart,
   PasswordInput,
   Tile,
+  Title,
 } from '@/components';
 
 import './Working.scss';
 import { Sidebar } from '../../components/sidebar';
 
-export const Working: React.FC = () => {
+const Working = () => {
   const { t } = useTranslation();
 
   const name = 'Wiktor';
@@ -39,21 +40,10 @@ export const Working: React.FC = () => {
     <div>
       <Sidebar></Sidebar>
       {/* i18next start */}
-      <h1>{t('welcome_to_react')}</h1>
-      <p>{t('variable_example', { name })}</p>
+      <Title title={t('welcome to react')} />
+      <p>{t('variable example', { name })}</p>
 
-      {/* LANGUAGE SWITCH WORKING VERSION */}
-      <ul>
-        {languages.map(({ code, name, country_code }) => (
-          <li key={country_code}>
-            <button onClick={() => i18next.changeLanguage(code)}>
-              <span className={`fi fi-${country_code}`}></span>
-              {name}
-            </button>
-          </li>
-        ))}
-      </ul>
-      <LanguageDropdown></LanguageDropdown>
+      <LanguageDropdown />
 
       {/* i18next end */}
       {/* chart start */}
@@ -146,10 +136,17 @@ export const Working: React.FC = () => {
           </div>
         </Form>
       </Row>
-      <Tile title="Earnings Overview">
+      <Tile header="Earnings Overview">
         <div>Siemano</div>
       </Tile>
       {/* input end */}
+      {/* Circular Buttons start */}
+      <CircularButton variant="primary" icon={faTrash} />
+      <CircularButton variant="danger" icon={faUser} />
+      <CircularButton variant="success" icon={faX} />
+      {/* Circular Buttons end */}
     </div>
   );
 };
+
+export default Working;

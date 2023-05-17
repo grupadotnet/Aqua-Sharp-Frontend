@@ -1,0 +1,21 @@
+{
+  "name": "Nazwa",
+  "welcome to react": "Witaj w React oraz react-i18next",
+  "variable example": "Cześć, nazywam się {{name}}",
+  "AquaSharp - Scientific Circle PIMI 2023": "AquaSharp - Koło Naukowe PIMI 2023",
+  "profile": "Profil",
+  "password change": "Zmiana hasła",
+  "old password": "Stare hasło",
+  "new password": "Nowe hasło",
+  "repeat password": "Powtórz hasło",
+  "change password": "Zmień hasło",
+  "control question change": "Zmiana pytania kontrolnego",
+  "password": "Hasło",
+  "question": "Pytanie",
+  "answer": "Odpowiedź",
+  "change question": "Zmień pytanie",
+  "language": "Język",
+  "select language": "Wybierz Język",
+  "polish": "polski",
+  "english": "angielski"
+}
