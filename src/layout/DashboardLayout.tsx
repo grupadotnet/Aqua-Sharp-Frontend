@@ -14,7 +14,6 @@ const DashboardLayout = ({ children, username }: Props) => {
   return (
     <div id="wrapper">
       <Sidebar />
-      {/* <ul className="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion toggled"></ul> */}
       <div id="content-wrapper" className="d-flex flex-column">
         <div id="content">
           <Header username={username}></Header>
