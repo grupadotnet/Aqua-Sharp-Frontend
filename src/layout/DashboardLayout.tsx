@@ -2,7 +2,7 @@ import React from 'react';
 import { Container } from 'react-bootstrap';
 import { useTranslation } from 'react-i18next';
 
-import { Header } from '@/components';
+import { Header, Sidebar } from '@/components';
 
 type Props = {
   children: React.ReactNode;
@@ -13,7 +13,8 @@ const DashboardLayout = ({ children, username }: Props) => {
   const { t } = useTranslation();
   return (
     <div id="wrapper">
-      <ul className="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion toggled"></ul>
+      <Sidebar />
+      {/* <ul className="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion toggled"></ul> */}
       <div id="content-wrapper" className="d-flex flex-column">
         <div id="content">
           <Header username={username}></Header>

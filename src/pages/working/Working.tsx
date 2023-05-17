@@ -1,6 +1,5 @@
 import { Col, Row } from 'react-bootstrap';
 import Form from 'react-bootstrap/Form';
-
 import { useTranslation } from 'react-i18next';
 
 import { faTrash, faUser, faX } from '@fortawesome/free-solid-svg-icons';
@@ -27,7 +26,6 @@ import {
 } from '@/components';
 
 import './Working.scss';
-import { Sidebar } from '../../components/sidebar';
 
 const Working = () => {
   const { t } = useTranslation();
@@ -38,7 +36,6 @@ const Working = () => {
 
   return (
     <div>
-      <Sidebar></Sidebar>
       {/* i18next start */}
       <Title title={t('welcome to react')} />
       <p>{t('variable example', { name })}</p>
