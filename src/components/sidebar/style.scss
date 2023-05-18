@@ -1,29 +1,28 @@
-*{
-  $base-family: Nunito;
+@use '@/styles/colors.scss' as colors;
+.column-1 {
+  background-color: colors.$primary;
+  min-height: 100vh;
+  height: auto;
+  width: 15.625rem;
+  &--open {
+    width: 6.25rem;
+    .aqua {
+      visibility: hidden;
+    }
+  }
 }
-.column-1{
-    background-color: #4e73df;
-    min-height: 100%;
-    height: auto;
-    width: 250px;
-}
-.aqua{
+
+.aqua {
   font-weight: 700;
-  font-size: 18px;
+  font-size: 1.125rem;
 }
-.column-1--open .aqua{
-  visibility: hidden;
-}
+
 .trigger {
-  height: 50px;
-  font-size: 24px;
+  height: 3rem;
+  font-size: 1.5rem;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
   color: white;
-}
-.column-1--open{
-    background-color: #4e73df;
-    width: 100px;
 }
