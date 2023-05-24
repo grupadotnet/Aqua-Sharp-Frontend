@@ -3,6 +3,8 @@ import { Navigate, Route, Routes } from 'react-router-dom';
 import { DashboardLayout } from '@/layout';
 import { Edit, NewAquarium, PageNotFound, Settings, Working } from '@/pages';
 
+import Aquarium from './pages/aquarium/Aquarium';
+
 function App() {
   return (
     <div>
@@ -13,7 +15,7 @@ function App() {
           <Route path="/newAquarium" element={<NewAquarium />} />
           <Route
             path="/aquarium/:id"
-            element={<h1>Szczegóły danego akwarium</h1>}
+            element={<Aquarium /> }
           />
           <Route
             path="/aquarium/:id/measurements"
