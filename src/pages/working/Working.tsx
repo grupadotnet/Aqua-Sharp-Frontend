@@ -1,29 +1,10 @@
 import { Col, Row } from 'react-bootstrap';
-import Form from 'react-bootstrap/Form';
 import { useTranslation } from 'react-i18next';
 
-import { faTrash, faUser, faX } from '@fortawesome/free-solid-svg-icons';
-import { CategoryScale } from 'chart.js';
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { Chart as ChartJS } from 'chart.js/auto';
 
-import {
-  BarChart,
-  Button,
-  Card,
-  ChartWrapper,
-  CircularButton,
-  DataCard,
-  EmailInput,
-  exampleData,
-  Input,
-  LanguageDropdown,
-  LightControlCard,
-  LineChart,
-  PasswordInput,
-  Tile,
-  Title,
-} from '@/components';
+import { DataCard, Tile } from '@/components';
 
 import './Working.scss';
 
