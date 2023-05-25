@@ -17,5 +17,7 @@
   "language": "Język",
   "select language": "Wybierz Język",
   "polish": "polski",
-  "english": "angielski"
+  "english": "angielski",
+  "turned on": "Włączone",
+  "turned off": "Wyłączone"
 }

@@ -14,5 +14,7 @@
   "length": "Długość (cm)",
   "aquarium setup": "Konfigurowanie akwarium",
   "parameters": "Parametry",
-  "aquarium name": "Nazwa akwarium"
+  "aquarium name": "Nazwa akwarium",
+  "light status": "Status światła",
+  "heater status": "Status grzałki"
 }

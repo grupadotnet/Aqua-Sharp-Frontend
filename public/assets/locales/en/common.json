@@ -15,5 +15,7 @@
   "answer": "answer",
   "change question": "change question",
   "language": "language",
-  "select language": "select language"
+  "select language": "select language",
+  "turned on": "Turned on",
+  "turned off": "Turned off"
 }
