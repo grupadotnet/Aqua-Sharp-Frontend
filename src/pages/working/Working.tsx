@@ -39,7 +39,6 @@ const Working = () => {
       {/* i18next start */}
       <Title title={t('welcome to react')} />
       <p>{t('variable example', { name })}</p>
-
       <LanguageDropdown />
 
       {/* i18next end */}
