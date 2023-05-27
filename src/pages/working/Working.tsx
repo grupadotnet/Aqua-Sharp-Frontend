@@ -1,18 +1,33 @@
 import { Col, Row } from 'react-bootstrap';
 import { useTranslation } from 'react-i18next';
+import { useNavigate } from 'react-router-dom';
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { Chart as ChartJS } from 'chart.js/auto';
 
-import { DataCard, Tile } from '@/components';
+import { DataCard, OptionsTile } from '@/components';
 
 import './Working.scss';
 
 const Working = () => {
   const { t } = useTranslation();
+  const navigate = useNavigate();
   return (
     <div>
-      <Tile header="Akwarium 1">
+      <OptionsTile
+        tileHeader="Akwarium 1"
+        dropdownHeader={t('options', { ns: 'common' })}
+        dropdownItems={[
+          { label: t('details', { ns: 'common' }), value: 'aquarium/123' },
+          {
+            label: t('configure', { ns: 'common' }),
+            value: 'aquarium/123/edit',
+          },
+        ]}
+        dropdownOnClick={(code: string) => {
+          navigate(`/${code}`, { replace: true });
+        }}
+      >
         <Row lg={4} md={2} sm={2} className="justify-content-md-center m-3">
           <Col sm>
             <DataCard
@@ -44,7 +59,7 @@ const Working = () => {
             </DataCard>
           </Col>
         </Row>
-      </Tile>
+      </OptionsTile>
     </div>
   );
 };

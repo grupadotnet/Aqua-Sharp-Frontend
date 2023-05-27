@@ -17,5 +17,8 @@
   "language": "language",
   "select language": "select language",
   "turned on": "Turned on",
-  "turned off": "Turned off"
+  "turned off": "Turned off",
+  "options": "Options",
+  "details": "Details",
+  "configure": "Configure"
 }

@@ -19,3 +19,4 @@ export { default as DoubleInputGroup } from './inputGroup/DoubleInputGroup';
 export { default as Tile } from './tile/Tile';
 export { default as Header } from './header/Header';
 export { default as EllipsisDropdown } from './dropdown/EllipsisDropdown';
+export { default as OptionsTile } from './tile/OptionsTile';

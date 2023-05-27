@@ -11,21 +11,6 @@ type Props = {
   onClick: (code: string) => void;
 };
 
-// // eslint-disable-next-line react/display-name
-// const CustomToggle = React.forwardRef(({ children, onClick }, ref) => (
-//   <a
-//     href=""
-//     ref={ref}
-//     onClick={(e) => {
-//       e.preventDefault();
-//       onClick(e);
-//     }}
-//   >
-//     {children}
-//     &#x25bc;
-//   </a>
-// ));
-
 type CustomToggleProps = DropdownToggleProps & {
   onClick: () => void;
 };
