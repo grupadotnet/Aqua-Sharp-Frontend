@@ -1,7 +1,14 @@
 import { Navigate, Route, Routes } from 'react-router-dom';
 
 import { DashboardLayout } from '@/layout';
-import { Edit, NewAquarium, PageNotFound, Settings, Working } from '@/pages';
+import {
+  Aquarium,
+  Edit,
+  NewAquarium,
+  PageNotFound,
+  Settings,
+  Working,
+} from '@/pages';
 
 function App() {
   return (
@@ -11,10 +18,7 @@ function App() {
           <Route path="/" element={<Navigate to="/dashboard" />} />
           <Route path="/dashboard" element={<Working />} />
           <Route path="/newAquarium" element={<NewAquarium />} />
-          <Route
-            path="/aquarium/:id"
-            element={<h1>Szczegóły danego akwarium</h1>}
-          />
+          <Route path="/aquarium/:id" element={<Aquarium />} />
           <Route
             path="/aquarium/:id/measurements"
             element={<h1>Historia pomiarów akwarium</h1>}
