@@ -16,7 +16,7 @@ const getDefaultOptions = (
       min: minY,
       max: maxY,
       title: {
-        display: true,
+        display: Boolean(titleY),
         text: titleY,
         padding: {
           bottom:
@@ -46,7 +46,7 @@ const getDefaultOptions = (
     x: {
       title: {
         fontWeight: 700,
-        display: true,
+        display: Boolean(titleX),
         text: titleX,
         padding: {
           top:

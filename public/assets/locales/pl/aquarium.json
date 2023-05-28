@@ -1,4 +1,9 @@
 {
+  "aquarium": "akwarium",
+  "thermophore status": "status grzałki",
+  "light status": "status światła",
+  "current water ph": "aktualne ph wody",
+  "current temperature": "aktualna temperatura",
   "water temperature": "Temperatura wody",
   "target water ph": "Docelowe pH wody",
   "temperature": "Temperatura",
