@@ -1,7 +1,14 @@
 import { Navigate, Route, Routes } from 'react-router-dom';
 
 import { DashboardLayout } from '@/layout';
-import { Edit, NewAquarium, PageNotFound, Settings, Working } from '@/pages';
+import {
+  Dashboard,
+  Edit,
+  NewAquarium,
+  PageNotFound,
+  Settings,
+  Working,
+} from '@/pages';
 
 function App() {
   return (
@@ -9,7 +16,8 @@ function App() {
       <DashboardLayout username="wiktor">
         <Routes>
           <Route path="/" element={<Navigate to="/dashboard" />} />
-          <Route path="/dashboard" element={<Working />} />
+          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/working" element={<Working />} />
           <Route path="/newAquarium" element={<NewAquarium />} />
           <Route
             path="/aquarium/:id"
