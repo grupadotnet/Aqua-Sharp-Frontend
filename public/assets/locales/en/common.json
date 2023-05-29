@@ -15,5 +15,7 @@
   "answer": "answer",
   "change question": "change question",
   "language": "language",
-  "select language": "select language"
+  "select language": "select language",
+  "first run": "First run",
+  "set password and question": "set password and control question"
 }
