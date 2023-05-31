@@ -16,5 +16,7 @@
   "parameters": "parameters",
   "aquarium name": "aquarium name",
   "light status": "light status",
-  "heater status": "heater status"
+  "heater status": "heater status",
+  "turned on": "turned on",
+  "turned off": "turned off"
 }

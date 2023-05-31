@@ -42,7 +42,7 @@ const Dashboard = () => {
               theme="info"
               title={t('light status', { ns: 'aquarium' })}
             >
-              {t('turned on', { ns: 'common' })}
+              {t('turned on', { ns: 'aquarium' })}
             </DataCard>
           </Col>
           <Col sm>
@@ -50,7 +50,7 @@ const Dashboard = () => {
               theme="warning"
               title={t('heater status', { ns: 'aquarium' })}
             >
-              {t('turned off', { ns: 'common' })}
+              {t('turned off', { ns: 'aquarium' })}
             </DataCard>
           </Col>
         </Row>
