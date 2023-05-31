@@ -11,15 +11,15 @@ const Dashboard = () => {
     <div>
       <OptionsTile
         tileHeader="Akwarium 1"
-        dropdownHeader={t('options', { ns: 'common' })}
-        dropdownItems={[
+        header={t('options', { ns: 'common' })}
+        items={[
           { label: t('details', { ns: 'common' }), value: 'aquarium/123' },
           {
             label: t('configure', { ns: 'common' }),
             value: 'aquarium/123/edit',
           },
         ]}
-        dropdownOnClick={(code: string) => {
+        onClick={(code: string) => {
           navigate(`/${code}`, { replace: true });
         }}
       >
