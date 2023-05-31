@@ -10,7 +10,7 @@ type Props = {
 
 const Tile = ({ header, children }: Props) => {
   return (
-    <Card>
+    <Card className="shadow">
       <Card.Header className="font-weight-bold text-primary">
         {header}
       </Card.Header>
