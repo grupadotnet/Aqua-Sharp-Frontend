@@ -1,6 +1,6 @@
 {
-  "changes prompt": "Czy zatwierdzić zmiany?",
-  "apply": "Zatwierdź",
-  "cancel": "Anuluj",
+  "changes prompt": "czy zatwierdzić zmiany?",
+  "apply": "zatwierdź",
+  "cancel": "anuluj",
   "Back to Dashboard": "Powrót do strony startowej"
 }

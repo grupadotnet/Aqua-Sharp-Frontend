@@ -1,7 +1,7 @@
 {
   "name": "name",
   "welcome to react": "welcome to react",
-  "variable example": "Hi, my name is {{name}}",
+  "variable example": "hi, my name is {{name}}",
   "AquaSharp - Scientific Circle PIMI 2023": "AquaSharp - Scientific Circle PIMI 2023",
   "profile": "profile",
   "password change": "password change",
@@ -16,9 +16,9 @@
   "change question": "change question",
   "language": "language",
   "select language": "select language",
-  "turned on": "Turned on",
-  "turned off": "Turned off",
-  "options": "Options",
-  "details": "Details",
-  "configure": "Configure"
+  "turned on": "turned on",
+  "turned off": "turned off",
+  "options": "options",
+  "details": "details",
+  "configure": "configure"
 }
