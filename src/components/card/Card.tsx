@@ -4,10 +4,11 @@ import Card from 'react-bootstrap/Card';
 type Props = {
   children: string | ReactElement;
   theme: Theme;
+  isAChild?: boolean;
 };
 
-const DataCard = ({ children, theme }: Props) => (
-  <Card body className={`shadow border-left-${theme}`}>
+const DataCard = ({ children, theme, isAChild = false }: Props) => (
+  <Card body className={`${isAChild ? '' : 'shadow'} border-left-${theme}`}>
     {children}
   </Card>
 );

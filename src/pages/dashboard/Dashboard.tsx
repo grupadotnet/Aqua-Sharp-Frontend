@@ -28,12 +28,17 @@ const Dashboard = () => {
             <DataCard
               theme="primary"
               title={t('temperature', { ns: 'aquarium' })}
+              isAChild
             >
               23&#8451;
             </DataCard>
           </Col>
           <Col sm>
-            <DataCard theme="success" title={t('water ph', { ns: 'aquarium' })}>
+            <DataCard
+              theme="success"
+              title={t('water ph', { ns: 'aquarium' })}
+              isAChild
+            >
               pH 7
             </DataCard>
           </Col>
@@ -41,6 +46,7 @@ const Dashboard = () => {
             <DataCard
               theme="info"
               title={t('light status', { ns: 'aquarium' })}
+              isAChild
             >
               {t('turned on', { ns: 'aquarium' })}
             </DataCard>
@@ -49,6 +55,7 @@ const Dashboard = () => {
             <DataCard
               theme="warning"
               title={t('heater status', { ns: 'aquarium' })}
+              isAChild
             >
               {t('turned off', { ns: 'aquarium' })}
             </DataCard>

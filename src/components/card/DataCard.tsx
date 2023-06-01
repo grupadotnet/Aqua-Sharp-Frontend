@@ -15,10 +15,11 @@ type Props = {
     | 'warning'
     | 'danger'
     | 'dark';
+  isAChild?: boolean;
 };
 
-const DataCard = ({ children, title, theme }: Props) => (
-  <Card theme={`${theme}`}>
+const DataCard = ({ children, title, theme, isAChild = false }: Props) => (
+  <Card isAChild={isAChild} theme={`${theme}`}>
     <Stack>
       <div className={`fs-6 fw-semibold text-${theme} text-uppercase mb-1`}>
         {title}
