@@ -7,7 +7,7 @@ type Props = {
 };
 
 const DataCard = ({ children, theme }: Props) => (
-  <Card body className={`border-left-${theme}`}>
+  <Card body className={`shadow border-left-${theme}`}>
     {children}
   </Card>
 );

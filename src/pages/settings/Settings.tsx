@@ -18,7 +18,7 @@ const Settings = () => {
       <Title title={t('profile')} />
       <Row>
         <Col md>
-          <Tile title={t('password change')}>
+          <Tile header={t('password change')}>
             <Form className="px-3">
               <div className="d-flex flex-column my-3 px-auto">
                 <Form.Group controlId="oldPassword" className="my-2">
@@ -39,7 +39,7 @@ const Settings = () => {
           </Tile>
         </Col>
         <Col md className="mb-4">
-          <Tile title={t('control question change')}>
+          <Tile header={t('control question change')}>
             <Form className="px-3">
               <div className="d-flex flex-column my-3 px-auto">
                 <Form.Group controlId="password" className="my-2">
@@ -62,7 +62,7 @@ const Settings = () => {
       </Row>
       <Row>
         <Col xs="auto">
-          <Tile title={t('language')}>
+          <Tile header={t('language')}>
             <div className="mr-5">
               <LanguageDropdown />
             </div>
