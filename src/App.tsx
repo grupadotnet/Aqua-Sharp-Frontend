@@ -5,6 +5,7 @@ import {
   Aquarium,
   Dashboard,
   Edit,
+  Login,
   NewAquarium,
   PageNotFound,
   Settings,
@@ -33,12 +34,16 @@ function App() {
             <Route path="/aquarium/:id/edit" element={<Edit />} />
             <Route path="/settings" element={<Settings />} />
             <Route path="/first-run" element={<h1>Pierwsze uruchomienie</h1>} />
+            <Route path="/login" element={<Login />} />
             <Route path="/404" element={<PageNotFound />} />
             <Route path="*" element={<Navigate to="/404" />} />
           </Routes>
         </DashboardLayout>
       ) : (
-        <div>zaloguj sie chujku</div>
+        <Routes>
+          <Route path="/login" element={<Login />} />
+          <Route path="*" element={<Navigate to="/login" />} />
+        </Routes>
       )}
     </div>
   );

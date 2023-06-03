@@ -1,12 +1,9 @@
 {
-  "changes prompt": "czy zatwierdzić zmiany?",
-  "apply": "zatwierdź",
-  "cancel": "anuluj",
-  "Back to Dashboard": "Powrót do strony startowej"
   "changes prompt": "Czy zatwierdzić zmiany?",
   "apply": "Zatwierdź",
   "cancel": "Anuluj",
   "Back to Dashboard": "Powrót do strony startowej",
   "turned on": "włączone",
-  "turned off": "wyłączone"
+  "turned off": "wyłączone",
+  "log in": "zaloguj się"
 }
