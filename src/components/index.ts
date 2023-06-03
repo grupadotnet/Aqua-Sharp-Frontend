@@ -20,3 +20,5 @@ export { default as Tile } from './tile/Tile';
 export { default as Header } from './header/Header';
 export { default as EllipsisDropdown } from './dropdown/EllipsisDropdown';
 export { default as OptionsTile } from './tile/OptionsTile';
+export { default as Sidebar } from './sidebar/Sidebar';
+export { default as Splitbutton } from './splitButton/Splitbutton';
