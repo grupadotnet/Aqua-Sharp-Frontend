@@ -11,9 +11,10 @@ const Aquarium = () => {
 
   return (
     <div>
-      <header className="fw-semibold text-capitalize mb-4 h3">{`${
-        (t('aquarium'), { ns: 'aquarium' })
-      } ${params.id}`}</header>
+      <header className="fw-semibold text-capitalize mb-4 h3">{`${t(
+        'aquarium',
+        { ns: 'aquarium' }
+      )} ${params.id}`}</header>
       <Row className="mb-4">
         <Col>
           <DataCard
