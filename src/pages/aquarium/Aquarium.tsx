@@ -2,12 +2,18 @@ import { Col, Row } from 'react-bootstrap';
 import { useTranslation } from 'react-i18next';
 import { useParams } from 'react-router';
 
+import { useTelemetry } from 'ux4iot-react';
+
 import { BarChart, DataCard, exampleData, LineChart, Tile } from '@/components';
 
 const Aquarium = () => {
   const { t } = useTranslation();
 
   const params = useParams();
+
+  const temperature = useTelemetry('AquaSharp_mkr_1', 'Temperature');
+
+  console.log(temperature);
 
   return (
     <div>
