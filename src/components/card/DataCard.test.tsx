@@ -7,7 +7,9 @@ const globalWithAct = global as typeof globalThis & {
   IS_REACT_ACT_ENVIRONMENT: boolean;
 };
 globalWithAct.IS_REACT_ACT_ENVIRONMENT = true;
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 let container: any = null;
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 let root: any = null;
 beforeEach(() => {
   act(() => {
