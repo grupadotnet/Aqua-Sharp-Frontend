@@ -13,7 +13,7 @@ const Dashboard = () => {
         tileHeader="Akwarium 1"
         header={t('options', { ns: 'common' })}
         items={[
-          { label: t('details', { ns: 'common' }), value: 'aquarium/123' },
+          { label: t('details', { ns: 'common' }), value: 'aquarium/1' },
           {
             label: t('configure', { ns: 'common' }),
             value: 'aquarium/123/edit',
@@ -23,10 +23,26 @@ const Dashboard = () => {
           navigate(`/${code}`, { replace: true });
         }}
       >
-        <Row lg={4} md={2} sm={2} className="justify-content-md-center m-3">
+        <Row lg={3} md={2} sm={2} className="justify-content-md-center m-3">
           <Col sm>
             <DataCard
               theme="primary"
+              title={t('temperature', { ns: 'aquarium' })}
+              withoutShadow
+              content="dsdas"
+            />
+          </Col>
+          <Col sm>
+            <DataCard
+              theme="info"
+              title={t('water ph', { ns: 'aquarium' })}
+              withoutShadow
+              content="dsdas"
+            />
+          </Col>
+          <Col sm>
+            <DataCard
+              theme="success"
               title={t('temperature', { ns: 'aquarium' })}
               withoutShadow
               content="dsdas"

@@ -62,14 +62,6 @@ const Aquarium = () => {
           </Tile>
         </Col>
       </Row>
-      <button
-        onClick={() => {
-          console.log('xd');
-          return navigate('/dashboard');
-        }}
-      >
-        click
-      </button>
     </div>
   );
 };
