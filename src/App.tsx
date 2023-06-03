@@ -8,9 +8,9 @@ import {
   Aquarium,
   Dashboard,
   Edit,
+  Error,
   Login,
   NewAquarium,
-  PageNotFound,
   Settings,
   Working,
 } from '@/pages';
@@ -20,44 +20,89 @@ import { useAuthorization } from './hooks';
 function App() {
   const [user] = useAuthorization();
 
-  const isLoggedIn = (component: React.ReactNode) =>
-    user?.isLogged ? (
-      <DashboardLayout username={user?.username || 'User'}>
-        {component}
-      </DashboardLayout>
-    ) : (
-      <Navigate to="/login" />
-    );
-
   return (
     <div>
-      <DashboardLayout username={user?.username || 'Wiktor'}>
-        <Ux4iotContextProvider
-          options={{
-            adminConnectionString: import.meta.env.VITE_ACCESS,
-            onSocketConnectionUpdate: (reason, description) =>
-              console.log(reason, description),
-          }}
-        >
-          <Routes>
-            <Route path="/" element={<Navigate to="/dashboard" />} />
-            <Route path="/dashboard" element={<Dashboard />} />
-            <Route path="/working" element={<Working />} />
-            <Route path="/newAquarium" element={<NewAquarium />} />
-            <Route path="/aquarium/:id" element={<Aquarium />} />
-            <Route
-              path="/aquarium/:id/measurements"
-              element={<h1>Historia pomiarów akwarium</h1>}
-            />
-            <Route path="/aquarium/:id/edit" element={<Edit />} />
-            <Route path="/settings" element={<Settings />} />
-            <Route path="/first-run" element={<h1>Pierwsze uruchomienie</h1>} />
-            <Route path="/404" element={<PageNotFound />} />
-            <Route path="/login" element={<Login />} />
-            <Route path="*" element={<Navigate to="/404" />} />
-          </Routes>
-        </Ux4iotContextProvider>
-      </DashboardLayout>
+      <Ux4iotContextProvider
+        options={{
+          adminConnectionString: import.meta.env.VITE_ACCESS,
+          onSocketConnectionUpdate: (reason, description) =>
+            console.log(reason, description),
+        }}
+      >
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <DashboardLayout username={user?.username || 'User'}>
+                <Navigate to="/dashboard" />
+              </DashboardLayout>
+            }
+          />
+          <Route
+            path="/dashboard"
+            element={
+              <DashboardLayout username={user?.username || 'User'}>
+                <Dashboard />
+              </DashboardLayout>
+            }
+          />
+          <Route
+            path="/working"
+            element={
+              <DashboardLayout username={user?.username || 'User'}>
+                <Working />
+              </DashboardLayout>
+            }
+          />
+          <Route
+            path="/newAquarium"
+            element={
+              <DashboardLayout username={user?.username || 'User'}>
+                <NewAquarium />
+              </DashboardLayout>
+            }
+          />
+          <Route
+            path="/aquarium/:id"
+            element={
+              <DashboardLayout username={user?.username || 'User'}>
+                <Aquarium />
+              </DashboardLayout>
+            }
+          />
+          <Route
+            path="/aquarium/:id/measurements"
+            element={<h1>Historia pomiarów akwarium</h1>}
+          />
+          <Route
+            path="/aquarium/:id/edit"
+            element={
+              <DashboardLayout username={user?.username || 'User'}>
+                <Edit />
+              </DashboardLayout>
+            }
+          />
+          <Route
+            path="/settings"
+            element={
+              <DashboardLayout username={user?.username || 'User'}>
+                <Settings />
+              </DashboardLayout>
+            }
+          />
+          <Route path="/first-run" element={<h1>Pierwsze uruchomienie</h1>} />
+          <Route path="/login" element={<Login />} />
+          <Route
+            path="/404"
+            element={
+              <DashboardLayout username={user?.username || 'User'}>
+                <Error statusCode={404} />
+              </DashboardLayout>
+            }
+          />
+          <Route path="*" element={<Navigate to="/404" />} />
+        </Routes>
+      </Ux4iotContextProvider>
     </div>
   );
 }

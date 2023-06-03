@@ -11,10 +11,6 @@ const Aquarium = () => {
 
   const params = useParams();
 
-  const temperature = useTelemetry('AquaSharp_mkr_1', 'Temperature');
-
-  console.log(temperature);
-
   return (
     <div>
       <header className="fw-semibold text-capitalize mb-4 h3">{`${t(
@@ -66,6 +62,14 @@ const Aquarium = () => {
           </Tile>
         </Col>
       </Row>
+      <button
+        onClick={() => {
+          console.log('xd');
+          return navigate('/dashboard');
+        }}
+      >
+        click
+      </button>
     </div>
   );
 };
