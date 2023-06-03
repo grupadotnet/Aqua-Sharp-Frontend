@@ -1,6 +1,6 @@
 import { Col, Row } from 'react-bootstrap';
 import { useTranslation } from 'react-i18next';
-import { useParams } from 'react-router';
+import { useNavigate, useParams } from 'react-router';
 
 import { BarChart, DataCard, exampleData, LineChart, Tile } from '@/components';
 
@@ -8,6 +8,8 @@ const Aquarium = () => {
   const { t } = useTranslation();
 
   const params = useParams();
+
+  const navigate = useNavigate();
 
   return (
     <div>
@@ -60,6 +62,14 @@ const Aquarium = () => {
           </Tile>
         </Col>
       </Row>
+      <button
+        onClick={() => {
+          console.log('xd');
+          return navigate('/dashboard');
+        }}
+      >
+        click
+      </button>
     </div>
   );
 };
