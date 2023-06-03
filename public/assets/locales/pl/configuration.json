@@ -2,5 +2,7 @@
   "changes prompt": "Czy zatwierdzić zmiany?",
   "apply": "Zatwierdź",
   "cancel": "Anuluj",
-  "Back to Dashboard": "Powrót do strony startowej"
+  "Back to Dashboard": "Powrót do strony startowej",
+  "turned on": "włączone",
+  "turned off": "wyłączone"
 }
