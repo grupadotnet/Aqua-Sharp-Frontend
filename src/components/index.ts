@@ -18,4 +18,5 @@ export { default as SingleInputGroup } from './inputGroup/SingleInputGroup';
 export { default as DoubleInputGroup } from './inputGroup/DoubleInputGroup';
 export { default as Tile } from './tile/Tile';
 export { default as Header } from './header/Header';
-export{default as Sidebar} from "./sidebar/Sidebar";
+export { default as Sidebar } from './sidebar/Sidebar';
+export { default as Splitbutton } from './splitButton/Splitbutton';

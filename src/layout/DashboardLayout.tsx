@@ -2,7 +2,7 @@ import React from 'react';
 import { Container } from 'react-bootstrap';
 import { useTranslation } from 'react-i18next';
 
-import { Header, Sidebar } from '@/components';
+import { Header, Sidebar, Splitbutton } from '@/components';
 
 type Props = {
   children: React.ReactNode;
@@ -18,7 +18,9 @@ const DashboardLayout = ({ children, username }: Props) => {
         <div id="content">
           <Header username={username}></Header>
           <Container fluid>{children}</Container>
+          <Splitbutton />
         </div>
+
         <footer className="sticky-footer bg-white">
           <Container className="my-auto">
             <div className="copyright text-center my-auto">
