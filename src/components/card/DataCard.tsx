@@ -7,14 +7,7 @@ import './DataCard.scss';
 type Props = {
   children: string;
   title: string;
-  theme:
-    | 'primary'
-    | 'secondary'
-    | 'success'
-    | 'info'
-    | 'warning'
-    | 'danger'
-    | 'dark';
+  theme: Theme;
   isAChild?: boolean;
 };
 
