@@ -39,9 +39,7 @@ const Working = () => {
       {/* i18next start */}
       <Title title={t('welcome to react')} />
       <p>{t('variable example', { name })}</p>
-
       <LanguageDropdown />
-
       {/* i18next end */}
       {/* chart start */}
       {/* wysokość wykresów będziemy definiowali za pomocą scss'a - podajemy nazwę klasy i tworzymy style dla wrappera w zależności od naszych aktualnych potrzeb */}
