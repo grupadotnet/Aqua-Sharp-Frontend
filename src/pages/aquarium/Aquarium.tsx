@@ -12,7 +12,7 @@ const Aquarium = () => {
   const params = useParams();
 
   useEffect(() => {
-    api.get(`Aquarium/${params.id}`, {});
+    api.get(`Aquarium/${params.id}`).then((res) => console.log(res));
   }, []);
 
   return (

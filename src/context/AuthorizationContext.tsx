@@ -1,5 +1,7 @@
 import React, { createContext, useState } from 'react';
 
+import Cookies from 'universal-cookie';
+
 import { User } from '@/types/config/login';
 
 export const AuthorizationContext = createContext<
@@ -11,7 +13,10 @@ type Props = {
 };
 
 export const AuthorizationProvider = ({ children }: Props) => {
-  const [user, setUser] = useState<User>({ isLogged: false });
+  const cookies = new Cookies();
+  const [user, setUser] = useState<User>({
+    isLogged: cookies.get('Authorization'),
+  });
 
   return (
     <AuthorizationContext.Provider value={[user, setUser]}>

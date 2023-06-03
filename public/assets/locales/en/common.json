@@ -1,7 +1,5 @@
 {
   "name": "name",
-  "welcome to react": "welcome to react",
-  "variable example": "hi, my name is {{name}}",
   "AquaSharp - Scientific Circle PIMI 2023": "AquaSharp - Scientific Circle PIMI 2023",
   "profile": "profile",
   "password change": "password change",
@@ -16,7 +14,10 @@
   "change question": "change question",
   "language": "language",
   "select language": "select language",
+  "polish": "polish",
+  "english": "english",
   "options": "options",
   "details": "details",
-  "configure": "configure"
+  "configure": "configure",
+  "something went wrong": "something went wrong"
 }
