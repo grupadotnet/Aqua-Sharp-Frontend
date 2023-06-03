@@ -39,8 +39,6 @@ const Login = () => {
       .catch(() => setError(t('Something went wrong', { ns: 'common' })));
   };
 
-  console.log(error);
-
   return (
     <form onSubmit={login}>
       <PasswordInput onChange={(e) => setData({ password: e.target.value })} />
