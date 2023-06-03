@@ -1,15 +1,19 @@
+import { useEffect } from 'react';
 import { Col, Row } from 'react-bootstrap';
 import { useTranslation } from 'react-i18next';
-import { useNavigate, useParams } from 'react-router';
+import { useParams } from 'react-router';
 
 import { BarChart, DataCard, exampleData, LineChart, Tile } from '@/components';
+import { api } from '@/services/axios';
 
 const Aquarium = () => {
   const { t } = useTranslation();
 
   const params = useParams();
 
-  const navigate = useNavigate();
+  useEffect(() => {
+    api.get(`Aquarium/${params.id}`, {});
+  }, []);
 
   return (
     <div>
@@ -62,14 +66,6 @@ const Aquarium = () => {
           </Tile>
         </Col>
       </Row>
-      <button
-        onClick={() => {
-          console.log('xd');
-          return navigate('/dashboard');
-        }}
-      >
-        click
-      </button>
     </div>
   );
 };
