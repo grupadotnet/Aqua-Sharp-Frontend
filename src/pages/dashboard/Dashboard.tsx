@@ -29,36 +29,8 @@ const Dashboard = () => {
               theme="primary"
               title={t('temperature', { ns: 'aquarium' })}
               withoutShadow
-            >
-              23&#8451;
-            </DataCard>
-          </Col>
-          <Col sm>
-            <DataCard
-              theme="success"
-              title={t('water ph', { ns: 'aquarium' })}
-              withoutShadow
-            >
-              pH 7
-            </DataCard>
-          </Col>
-          <Col sm>
-            <DataCard
-              theme="info"
-              title={t('light status', { ns: 'aquarium' })}
-              withoutShadow
-            >
-              {t('turned on', { ns: 'aquarium' })}
-            </DataCard>
-          </Col>
-          <Col sm>
-            <DataCard
-              theme="warning"
-              title={t('heater status', { ns: 'aquarium' })}
-              withoutShadow
-            >
-              {t('turned off', { ns: 'aquarium' })}
-            </DataCard>
+              content="dsdas"
+            />
           </Col>
         </Row>
       </OptionsTile>
