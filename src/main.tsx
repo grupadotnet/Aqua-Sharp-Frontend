@@ -10,6 +10,7 @@ import HttpApi from 'i18next-http-backend';
 import { LoadingSpinner } from '@/components';
 
 import App from './App';
+import { AuthorizationProvider } from './context';
 
 import '/node_modules/flag-icons/css/flag-icons.min.css';
 import './assets/bootstrap/css/sb-admin-2.min.css';
@@ -46,7 +47,9 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <Suspense fallback={<LoadingSpinner />}>
     <React.StrictMode>
       <BrowserRouter>
-        <App />
+        <AuthorizationProvider>
+          <App />
+        </AuthorizationProvider>
       </BrowserRouter>
     </React.StrictMode>
   </Suspense>
