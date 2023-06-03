@@ -2,8 +2,8 @@ import { Navigate, Route, Routes } from 'react-router-dom';
 
 import { DashboardLayout } from '@/layout';
 import {
-  Dashboard,
   Aquarium,
+  Dashboard,
   Edit,
   NewAquarium,
   PageNotFound,

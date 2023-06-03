@@ -12,7 +12,7 @@ type Props = {
   withoutShadow?: boolean;
 };
 
-const DataCard = ({ content, title, theme }: Props) => (
+const DataCard = ({ content, title, theme, withoutShadow }: Props) => (
   <Card withoutShadow={withoutShadow} theme={theme}>
     <Stack>
       <div className={`fs-6 fw-semibold text-${theme} text-uppercase mb-1`}>
