@@ -11,7 +11,7 @@ type Props = {
 };
 
 export const AuthorizationProvider = ({ children }: Props) => {
-  const [user, setUser] = useState<User>({ isLogged: false });
+  const [user, setUser] = useState<User>({ isLogged: true });
 
   return (
     <AuthorizationContext.Provider value={[user, setUser]}>
