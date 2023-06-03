@@ -85,18 +85,11 @@ const Working = () => {
         <Card theme="warning">Testowy children</Card>
       </Row>
       <Row className="justify-content-md-center my-3">
-        <DataCard theme="primary" title="Jakiś Tytuł">
-          Przykładowa wartość
-        </DataCard>
-        <DataCard theme="success" title="earnings (ANNUAL)">
-          $215,000
-        </DataCard>
-        <DataCard theme="info" title="Temperatura mojego obiadu">
-          2137
-        </DataCard>
-        <DataCard theme="warning" title="Temperatura mojego obiadu">
-          5PLN
-        </DataCard>
+        <DataCard
+          theme="primary"
+          title="Jakiś Tytuł"
+          content="przykładowa wartość"
+        />
       </Row>
       <Row className="justify-content-md-center my-3">
         <LightControlCard />

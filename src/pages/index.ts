@@ -4,3 +4,4 @@ export { default as Settings } from './settings/Settings';
 export { default as Edit } from './edit/Edit';
 export { default as NewAquarium } from './newAquarium/NewAquarium';
 export { default as Dashboard } from './dashboard/Dashboard';
+export { default as Aquarium } from './aquarium/Aquarium';
