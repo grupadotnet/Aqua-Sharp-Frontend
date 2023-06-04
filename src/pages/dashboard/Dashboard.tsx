@@ -13,14 +13,19 @@ const Dashboard = () => {
   const [aquariums, setAquariums] = useState<Aquarium[]>([]);
 
   useEffect(() => {
-    api
-      .get('/Aquarium')
-      .then((res) => {
-        if (res.data && res.status === 200) {
-          setAquariums(res.data);
-        }
-      })
-      .catch((e) => console.log(e));
+    const getAquariumData = () =>
+      api
+        .get('/Aquarium')
+        .then((res) => {
+          if (res.data && res.status === 200) {
+            setAquariums(res.data);
+          }
+        })
+        .catch((e) => console.log(e));
+
+    getAquariumData();
+    const fetchAquariumData = setInterval(getAquariumData, 3000 * 10);
+    return () => clearInterval(fetchAquariumData);
   }, []);
 
   return (

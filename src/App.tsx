@@ -1,5 +1,6 @@
 import { Navigate, Route, Routes } from 'react-router-dom';
 
+// import { Ux4iotContextProvider } from 'ux4iot-react';
 import { DashboardLayout } from '@/layout';
 import {
   Aquarium,
@@ -19,6 +20,13 @@ function App() {
 
   return (
     <div>
+      {/* <Ux4iotContextProvider
+        options={{
+          adminConnectionString: import.meta.env.VITE_ACCESS,
+          onSocketConnectionUpdate: (reason, description) =>
+            console.log(reason, description),
+        }}
+      > */}
       <Routes>
         <Route
           path="/"
@@ -92,6 +100,7 @@ function App() {
         />
         <Route path="*" element={<Navigate to="/404" />} />
       </Routes>
+      {/* </Ux4iotContextProvider> */}
     </div>
   );
 }
