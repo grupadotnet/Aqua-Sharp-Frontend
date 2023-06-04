@@ -13,7 +13,7 @@ type Props = React.ComponentPropsWithoutRef<typeof EllipsisDropdown> & {
 const OptionsTile = ({ tileHeader, children, ...dropdownProps }: Props) => {
   return (
     <Card className="shadow">
-      <Card.Header className="font-weight-bold text-primary d-flex justify-content-between">
+      <Card.Header className="font-weight-bold text-primary d-flex justify-content-between text-capitalize">
         {tileHeader}
         <EllipsisDropdown {...dropdownProps} />
       </Card.Header>

@@ -26,7 +26,9 @@ const DashboardLayout = ({ children, username }: Props) => {
           <footer className="sticky-footer bg-white">
             <Container className="my-auto">
               <div className="copyright text-center my-auto">
-                <span>{t('AquaSharp - Scientific Circle PIMI 2023')}</span>
+                <span>
+                  {t('AquaSharp - Scientific Circle PIMI 2023')} Alfa v0.0.1
+                </span>
               </div>
             </Container>
           </footer>

@@ -6,7 +6,7 @@ export type Device = {
   manualMode: boolean;
 
   aquarium: Aquarium;
-};
+} | null;
 
 export type createDevice = {
   measurementFrequency: number;
