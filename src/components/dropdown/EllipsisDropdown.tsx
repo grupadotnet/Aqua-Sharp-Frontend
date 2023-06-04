@@ -14,7 +14,11 @@ const EllipsisDropdown = ({ header, items, onClick }: Props) => (
     <Dropdown.Menu>
       <Dropdown.Header>{header}</Dropdown.Header>
       {items.map((item, i) => (
-        <Dropdown.Item key={i} onClick={() => onClick(item.value)}>
+        <Dropdown.Item
+          key={i}
+          onClick={() => onClick(item.value)}
+          className="text-first-upper"
+        >
           {item.label}
         </Dropdown.Item>
       ))}

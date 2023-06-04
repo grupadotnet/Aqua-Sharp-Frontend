@@ -10,7 +10,7 @@ type Props = {
 const DataCard = ({ children, theme, withoutShadow = false }: Props) => (
   <Card
     body
-    className={`${withoutShadow ? '' : 'shadow'} border-left-${theme}`}
+    className={`${withoutShadow ? '' : 'shadow'} border-left-${theme} mb-3`}
   >
     {children}
   </Card>

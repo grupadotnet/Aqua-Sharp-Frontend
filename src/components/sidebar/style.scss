@@ -1,23 +1,5 @@
 @use '@/styles/colors.scss' as colors;
 
-.column-1 {
-  background-color: colors.$primary;
-  min-height: 100vh;
-  height: auto;
-  width: 15.625rem;
-  &--open {
-    width: 6.25rem;
-    .aqua {
-      visibility: hidden;
-    }
-  }
-}
-
-.aqua {
-  font-weight: 700;
-  font-size: 1.125rem;
-}
-
 .trigger {
   height: 3rem;
   font-size: 1.5rem;
@@ -26,4 +8,13 @@
   align-items: center;
   justify-content: center;
   color: white;
+}
+
+#sidebarToggleTop {
+  position: absolute;
+  height: 4.375rem;
+  margin-left: 1rem;
+  &.btn-link:hover {
+    color: colors.$primary;
+  }
 }

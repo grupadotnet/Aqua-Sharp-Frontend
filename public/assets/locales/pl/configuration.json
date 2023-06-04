@@ -5,10 +5,10 @@
   "Back to Dashboard": "Powrót do strony startowej",
   "turned on": "włączone",
   "turned off": "wyłączone",
-  "login": "zaloguj się",
-  "Dashboard": "Panel",
-  "Interface": "Interfejs",
-  "Settings": "Ustawienia",
-  "Add aquarium": "Dodaj akwarium",
-  "My aquariums": "Moje akwaria"
+  "log in": "zaloguj się",
+  "dashboard": "Panel",
+  "interface": "Interfejs",
+  "settings": "Ustawienia",
+  "add aquarium": "Dodaj akwarium",
+  "my aquariums": "Moje akwaria"
 }
