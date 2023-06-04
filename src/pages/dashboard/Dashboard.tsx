@@ -24,7 +24,7 @@ const Dashboard = () => {
         .catch((e) => console.log(e));
 
     getAquariumData();
-    const fetchAquariumData = setInterval(getAquariumData, 3000 * 10);
+    const fetchAquariumData = setInterval(getAquariumData, 3000 * 60);
     return () => clearInterval(fetchAquariumData);
   }, []);
 
