@@ -8,6 +8,8 @@ import { Button, PasswordInput } from '@/components';
 import { useAuthorization } from '@/hooks';
 import { api } from '@/services/axios';
 import { Login as LoginType } from '@/types/config/login';
+import { Card, Row } from "react-bootstrap";
+import FullWidthButton from "@/components/button/FullWidthButton";
 
 const Login = () => {
   const { t } = useTranslation();
@@ -40,13 +42,24 @@ const Login = () => {
   };
 
   return (
-    <form onSubmit={login}>
-      <PasswordInput onChange={(e) => setData({ password: e.target.value })} />
-      {error}
-      <Button variant="primary" type="submit">
-        {t('log in', { ns: 'configuration' })}
-      </Button>
-    </form>
+    <Row className="vh-100 justify-content-center align-items-center">
+      <Card style={{width: '24rem', padding: '30px'}}>
+        <Row className="justify-content-center">
+          <h3 className="pb-4 ">
+            {t("Welcome back", { ns: 'common' })}
+          </h3>
+        </Row>
+        <form onSubmit={login}>
+          <div className="pb-3">
+            <PasswordInput placeholder="Password" onChange={(e) => setData({ password: e.target.value })} />
+          </div>
+          <p className="text-danger pb-3 m-0">{error}</p>
+          <FullWidthButton variant="primary" type="submit">
+            {t('Login', { ns: 'configuration' })}
+          </FullWidthButton>
+        </form>
+      </Card>
+    </Row>
   );
 };
 
