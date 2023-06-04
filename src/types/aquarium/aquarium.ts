@@ -14,6 +14,15 @@ export type Aquarium = {
   device: Device;
 };
 
+export type PaginatedAquarium = {
+  aquariumId: number;
+  name: string;
+  temperatures: { temperature: number; time: Date }[];
+  phs: { ph: number; time: Date }[];
+  dawn: Date;
+  sunset: Date;
+};
+
 export type createAquarium = {
   name: string;
   length: number;

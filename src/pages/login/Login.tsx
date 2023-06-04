@@ -1,15 +1,15 @@
 import { useState } from 'react';
+import { Card, Row } from 'react-bootstrap';
 import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
 
 import Cookies from 'universal-cookie';
 
-import { Button, PasswordInput } from '@/components';
+import { PasswordInput } from '@/components';
+import FullWidthButton from '@/components/button/FullWidthButton';
 import { useAuthorization } from '@/hooks';
 import { api } from '@/services/axios';
 import { Login as LoginType } from '@/types/config/login';
-import { Card, Row } from "react-bootstrap";
-import FullWidthButton from "@/components/button/FullWidthButton";
 
 const Login = () => {
   const { t } = useTranslation();
@@ -43,15 +43,16 @@ const Login = () => {
 
   return (
     <Row className="vh-100 justify-content-center align-items-center">
-      <Card style={{width: '24rem', padding: '30px'}}>
+      <Card style={{ width: '24rem', padding: '30px' }}>
         <Row className="justify-content-center">
-          <h3 className="pb-4 ">
-            {t("Welcome back", { ns: 'common' })}
-          </h3>
+          <h3 className="pb-4 ">{t('Welcome back', { ns: 'common' })}</h3>
         </Row>
         <form onSubmit={login}>
           <div className="pb-3">
-            <PasswordInput placeholder="Password" onChange={(e) => setData({ password: e.target.value })} />
+            <PasswordInput
+              placeholder="Password"
+              onChange={(e) => setData({ password: e.target.value })}
+            />
           </div>
           <p className="text-danger pb-3 m-0">{error}</p>
           <FullWidthButton variant="primary" type="submit">
