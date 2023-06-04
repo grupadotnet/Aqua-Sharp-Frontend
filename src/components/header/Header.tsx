@@ -4,6 +4,8 @@ import Nav from 'react-bootstrap/Nav';
 
 import userIcon from '@/assets/images/user.svg';
 
+import LanguageDropdown from '../dropdown/LanguageDropdown';
+
 type Props = {
   username: string;
 };
@@ -11,7 +13,10 @@ type Props = {
 const Header = ({ username }: Props) => {
   return (
     <Nav className="bg-white px-4 topbar mb-4 static-top shadow justify-content-end">
-      <Nav.Item className="d-flex align-items-center gap-4 h-100">
+      <Nav.Item className="d-flex align-items-center gap-3 h-100">
+        <Col>
+          <LanguageDropdown />
+        </Col>
         <Col>{username}</Col>
         <Image width="35" fluid rounded src={userIcon} />
       </Nav.Item>

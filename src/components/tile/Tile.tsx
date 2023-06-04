@@ -9,8 +9,8 @@ type Props = {
 };
 
 const Tile = ({ header, children }: Props) => (
-  <Card>
-    <Card.Header className="font-weight-bold text-dark text-capitalize">
+  <Card className="my-3">
+    <Card.Header className="font-weight-bold text-dark text-first-upper">
       {header}
     </Card.Header>
     <Card.Body className="d-flex flex-column gap-4">{children}</Card.Body>

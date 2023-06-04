@@ -1,7 +1,5 @@
 {
   "name": "nazwa",
-  "welcome to react": "witaj w React oraz react-i18next",
-  "variable example": "cześć, nazywam się {{name}}",
   "AquaSharp - Scientific Circle PIMI 2023": "AquaSharp - Koło Naukowe PIMI 2023",
   "profile": "profil",
   "password change": "zmiana hasła",
@@ -20,5 +18,7 @@
   "english": "angielski",
   "options": "opcje",
   "details": "szczegóły",
-  "configure": "konfiguruj"
+  "configure": "konfiguruj",
+  "something went wrong": "coś poszło nie tak",
+  "welcome back": "witaj ponownie"
 }

@@ -26,7 +26,8 @@
     "react-dom": "^18.2.0",
     "react-i18next": "^12.1.4",
     "react-router-dom": "^6.6.2",
-    "ux4iot-react": "^3.4.1"
+    "ux4iot-react": "^3.4.1",
+    "universal-cookie": "^4.0.4"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^5.16.5",

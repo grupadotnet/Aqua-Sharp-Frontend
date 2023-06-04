@@ -6,3 +6,12 @@ export type createMeasurement = {
   lightOn: boolean;
   aquariumId: number;
 };
+
+export type Measurement = {
+  time: string;
+  temperature: number;
+  ph: number;
+  tds: number;
+  lightOn: boolean;
+  aquariumId: number;
+};
