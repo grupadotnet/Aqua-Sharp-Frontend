@@ -75,8 +75,8 @@ const Aquarium = () => {
         'aquarium',
         { ns: 'aquarium' }
       )} ${params.id}`}</header>
-      <Row className="mb-4">
-        <Col>
+      <Row>
+        <Col lg={4} md={4} xs={12}>
           <DataCard
             theme="primary"
             title={t('current temperature', { ns: 'aquarium' })}
@@ -88,7 +88,7 @@ const Aquarium = () => {
             }
           />
         </Col>
-        <Col>
+        <Col lg={4} md={4} xs={12}>
           <DataCard
             theme="success"
             title={t('current ph', { ns: 'aquarium' })}
@@ -99,7 +99,7 @@ const Aquarium = () => {
             }
           />
         </Col>
-        <Col>
+        <Col lg={4} md={4} xs={12}>
           <DataCard
             theme="info"
             title={t('light status', { ns: 'aquarium' })}
@@ -112,7 +112,7 @@ const Aquarium = () => {
         </Col>
       </Row>
       <Row>
-        <Col className="w-50">
+        <Col lg={6} md={12} sm={12} className="w-100">
           <Tile header={t('temperature', { ns: 'aquarium' })}>
             <LineChart
               minY={0}
@@ -132,7 +132,7 @@ const Aquarium = () => {
             />
           </Tile>
         </Col>
-        <Col className="w-50">
+        <Col lg={6} md={12} sm={12} className="w-100">
           <Tile header={t('water ph', { ns: 'aquarium' })}>
             <BarChart
               minY={0}

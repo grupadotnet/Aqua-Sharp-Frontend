@@ -4,6 +4,7 @@ import { useTranslation } from 'react-i18next';
 import {
   faAngleLeft,
   faAngleRight,
+  faBars,
   faCog,
   faFolder,
   faTachometerAlt,
@@ -28,10 +29,17 @@ const Sidebar = () => {
 
   return (
     <ul
-      className={`navbar-nav bg-gradient-primary sidebar sidebar-dark accordion ${
+      className={`navbar-nav bg-primary sidebar sidebar-dark accordion ${
         isOpen && 'toggled'
       }`}
     >
+      <button
+        id="sidebarToggleTop"
+        className="btn btn-link d-md-none rounded-circle mr-3"
+        onClick={handleTrigger}
+      >
+        <FontAwesomeIcon icon={faBars} />
+      </button>
       <a className="sidebar-brand d-flex align-items-center justify-content-center">
         <div className="sidebar-brand-icon rotate-n-15">
           <i className="fas fa-laugh-wink"></i>
@@ -40,20 +48,20 @@ const Sidebar = () => {
       </a>
       <Divider additionalClasses="my-0" />
       <MenuItem
-        text={t('Dashboard')}
+        text={t('dashboard')}
         icon={faTachometerAlt}
         href="/dashboard"
       />
       <Divider />
-      <Header text={t('INTERFACE')} />
-      <MenuDropdown icon={faCog} text={t('Settings')}>
-        <MenuDropdownHeader text={t('Settings')} />
-        <MenuDropdownItem text={t('Add aquarium')} href="/newAquarium" />
+      <Header text={t('interface')} />
+      <MenuDropdown icon={faCog} text={t('settings')}>
+        <MenuDropdownHeader text={t('settings')} />
+        <MenuDropdownItem text={t('add aquarium')} href="/newAquarium" />
       </MenuDropdown>
-      <MenuDropdown icon={faFolder} text={t('My aquariums')}>
-        <MenuDropdownHeader text={t('My aquariums')} />
+      <MenuDropdown icon={faFolder} text={t('my aquariums')}>
+        <MenuDropdownHeader text={t('my aquariums')} />
         <MenuDropdownItem
-          text={t('Aquarium', { ns: 'aquarium' }) + ' 1'}
+          text={t('aquarium', { ns: 'aquarium' }) + ' 1'}
           href="/aquarium/1"
         />
       </MenuDropdown>

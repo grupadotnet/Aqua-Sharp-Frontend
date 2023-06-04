@@ -6,9 +6,9 @@
   "turned on": "włączone",
   "turned off": "wyłączone",
   "log in": "zaloguj się",
-  "Dashboard": "Panel",
-  "Interface": "Interfejs",
-  "Settings": "Ustawienia",
-  "Add aquarium": "Dodaj akwarium",
-  "My aquariums": "Moje akwaria"
+  "dashboard": "Panel",
+  "interface": "Interfejs",
+  "settings": "Ustawienia",
+  "add aquarium": "Dodaj akwarium",
+  "my aquariums": "Moje akwaria"
 }

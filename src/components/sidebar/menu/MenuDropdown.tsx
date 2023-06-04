@@ -2,7 +2,6 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 import { IconProp } from '@fortawesome/fontawesome-svg-core';
-import { faAngleDown } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 type Props = {
@@ -12,7 +11,7 @@ type Props = {
 };
 
 const MenuDropdown = ({ icon, text, children }: Props) => {
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
   const handleTrigger = () => setIsOpen((prev) => !prev);
 
   return (
@@ -28,7 +27,7 @@ const MenuDropdown = ({ icon, text, children }: Props) => {
         <i>
           <FontAwesomeIcon icon={icon} />
         </i>
-        <span>{text}</span>
+        <span className="text-first-upper">{text}</span>
       </Link>
       <div id={`#collapse${text}`} className={`collapse ${isOpen && 'show'}`}>
         <div className="bg-white py-2 collapse-inner rounded">{children}</div>

@@ -6,7 +6,7 @@ type Props = {
 };
 
 const MenuDropdownItem = ({ text, href }: Props) => (
-  <Link className="collapse-item" to={href}>
+  <Link className="collapse-item text-first-upper" to={href}>
     {text}
   </Link>
 );

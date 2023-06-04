@@ -6,9 +6,9 @@
   "turned on": "turned on",
   "turned off": "turned off",
   "log in": "log in",
-  "Dashboard": "Dashboard",
-  "Interface": "Interface",
-  "Settings": "Settings",
-  "Add aquarium": "Add aquarium",
-  "My aquariums": "My aquariums"
+  "dashboard": "Dashboard",
+  "interface": "Interface",
+  "settings": "Settings",
+  "add aquarium": "Add aquarium",
+  "my aquariums": "My aquariums"
 }
