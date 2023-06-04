@@ -4,8 +4,6 @@ import { useTranslation } from 'react-i18next';
 import { useParams } from 'react-router';
 import { useNavigate } from 'react-router-dom';
 
-import { useTelemetry } from 'ux4iot-react';
-
 import { BarChart, DataCard, LineChart, Tile } from '@/components';
 import { api } from '@/services/axios';
 import {
@@ -25,45 +23,50 @@ const Aquarium = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    Promise.all([
-      api.get<AquariumType>(`Aquarium/${params.id}`).then((res) => res.data),
-      api
-        .get<Measurement[]>('Measurement/pagination', {
-          params: {
-            aquariumId: params.id,
-            page: 1,
-          },
+    const getAquariumData = () =>
+      Promise.all([
+        api.get<AquariumType>(`Aquarium/${params.id}`).then((res) => res.data),
+        api
+          .get<Measurement[]>('Measurement/pagination', {
+            params: {
+              aquariumId: params.id,
+              page: 1,
+            },
+          })
+          .then((res) => res.data),
+      ])
+        .then(([aquarium, paginated]) => {
+          setAquarium({
+            aquariumId: aquarium.aquariumId,
+            name: aquarium.name,
+            sunset: aquarium.sunset,
+            dawn: aquarium.dawn,
+            temperatures: paginated
+              .map(({ temperature, time }) => ({
+                temperature,
+                time: new Date(time),
+              }))
+              .sort((a, b) => a.time.getTime() - b.time.getTime())
+              .slice(0, 10),
+            phs: paginated
+              .map(({ ph, time }) => ({
+                ph,
+                time: new Date(time),
+              }))
+              .sort((a, b) => a.time.getTime() - b.time.getTime())
+              .slice(0, 10),
+          });
         })
-        .then((res) => res.data),
-    ])
-      .then(([aquarium, paginated]) => {
-        setAquarium({
-          aquariumId: aquarium.aquariumId,
-          name: aquarium.name,
-          sunset: aquarium.sunset,
-          dawn: aquarium.dawn,
-          temperatures: paginated
-            .map(({ temperature, time }) => ({
-              temperature,
-              time: new Date(time),
-            }))
-            .sort((a, b) => a.time.getTime() - b.time.getTime())
-            .slice(0, 10),
-          phs: paginated
-            .map(({ ph, time }) => ({
-              ph,
-              time: new Date(time),
-            }))
-            .sort((a, b) => a.time.getTime() - b.time.getTime())
-            .slice(0, 10),
+        .catch((e) => {
+          console.log(e.response.status);
+          if (e.response.status === 404) {
+            navigate('/404');
+          }
         });
-      })
-      .catch((e) => {
-        console.log(e.response.status);
-        if (e.response.status === 404) {
-          navigate('/404');
-        }
-      });
+
+    getAquariumData();
+    const fetchAquariumData = setInterval(getAquariumData, 3000 * 10);
+    return () => clearInterval(fetchAquariumData);
   }, []);
 
   return (

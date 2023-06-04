@@ -6,7 +6,10 @@ type Props = React.ComponentProps<typeof ButtonComponent> & {
 };
 
 const Button = ({ children, ...passThroughProps }: Props) => (
-  <ButtonComponent {...passThroughProps} className="rounded-pill p-3 w-100">
+  <ButtonComponent
+    {...passThroughProps}
+    className="rounded-pill p-3 w-100 text-first-upper"
+  >
     {children}
   </ButtonComponent>
 );
