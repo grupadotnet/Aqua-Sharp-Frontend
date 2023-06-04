@@ -10,14 +10,14 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-import Divider from './components/Divider';
-import Header from './components/Header';
+import Divider from './Divider';
+import Header from './Header';
 import {
   MenuDropdown,
   MenuDropdownHeader,
   MenuDropdownItem,
   MenuItem,
-} from './components/Menu';
+} from './menu';
 
 import './style.scss';
 
