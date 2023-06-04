@@ -65,7 +65,7 @@ const Aquarium = () => {
         });
 
     getAquariumData();
-    const fetchAquariumData = setInterval(getAquariumData, 3000 * 10);
+    const fetchAquariumData = setInterval(getAquariumData, 3000 * 60);
     return () => clearInterval(fetchAquariumData);
   }, []);
 
