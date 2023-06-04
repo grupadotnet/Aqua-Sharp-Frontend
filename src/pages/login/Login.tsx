@@ -45,18 +45,20 @@ const Login = () => {
     <Row className="vh-100 justify-content-center align-items-center">
       <Card style={{ width: '24rem', padding: '30px' }}>
         <Row className="justify-content-center">
-          <h3 className="pb-4 ">{t('Welcome back', { ns: 'common' })}</h3>
+          <h3 className="pb-4 text-first-upper">
+            {t('welcome back', { ns: 'common' })}
+          </h3>
         </Row>
         <form onSubmit={login}>
           <div className="pb-3">
             <PasswordInput
-              placeholder="Password"
+              placeholder={t('password', { ns: 'common' })}
               onChange={(e) => setData({ password: e.target.value })}
             />
           </div>
           <p className="text-danger pb-3 m-0">{error}</p>
           <FullWidthButton variant="primary" type="submit">
-            {t('Login', { ns: 'configuration' })}
+            {t('log in', { ns: 'configuration' })}
           </FullWidthButton>
         </form>
       </Card>
