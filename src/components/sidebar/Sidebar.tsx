@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import {
@@ -10,6 +10,9 @@ import {
   faTachometerAlt,
 } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
+import { api } from '@/services/axios';
+import { Aquarium } from '@/types/aquarium/aquarium';
 
 import Divider from './Divider';
 import Header from './Header';
@@ -25,7 +28,19 @@ import './style.scss';
 const Sidebar = () => {
   const { t } = useTranslation(['configuration']);
   const [isOpen, setIsOpen] = useState(false);
+  const [allAquariums, setAllAquariums] = useState<Aquarium[]>([]);
   const handleTrigger = () => setIsOpen((prev) => !prev);
+
+  useEffect(() => {
+    api
+      .get('Aquarium')
+      .then((res) => {
+        if (res.status === 200 && res.data) {
+          setAllAquariums(res.data);
+        }
+      })
+      .catch((e) => console.error(e));
+  }, []);
 
   return (
     <ul
@@ -60,10 +75,13 @@ const Sidebar = () => {
       </MenuDropdown>
       <MenuDropdown icon={faFolder} text={t('my aquariums')}>
         <MenuDropdownHeader text={t('my aquariums')} />
-        <MenuDropdownItem
-          text={t('aquarium', { ns: 'aquarium' }) + ' 1'}
-          href="/aquarium/1"
-        />
+        {allAquariums.map(({ aquariumId }) => (
+          <MenuDropdownItem
+            key={aquariumId}
+            text={t('aquarium', { ns: 'aquarium' }) + ' ' + aquariumId}
+            href={`/aquarium/${aquariumId}`}
+          />
+        ))}
       </MenuDropdown>
       <Divider />
       <div className="text-center">
