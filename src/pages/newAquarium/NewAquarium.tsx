@@ -74,9 +74,9 @@ const NewAquarium = () => {
           </Tile>
           <Card theme="primary">
             <>
-              <h5 className="pt-3">
+              <h6 className="pt-2">
                 {t('changes prompt', { ns: 'configuration' })}
-              </h5>
+              </h6>
               <div className="d-flex flex-column my-3 px-3 row-gap-3">
                 <Button variant="success" type="submit">
                   {t('apply', { ns: 'configuration' })}

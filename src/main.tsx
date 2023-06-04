@@ -12,6 +12,7 @@ import { LoadingSpinner } from '@/components';
 import App from './App';
 import { AuthorizationProvider } from './context';
 
+import './styles/globalClass.scss';
 import '/node_modules/flag-icons/css/flag-icons.min.css';
 import './assets/bootstrap/css/sb-admin-2.min.css';
 
