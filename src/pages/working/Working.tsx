@@ -21,6 +21,7 @@ import {
   LightControlCard,
   LineChart,
   PasswordInput,
+  OtherButtons,
   Tile,
   Title,
 } from '@/components';
@@ -102,6 +103,10 @@ const Working = () => {
       <Button variant="warning">warning</Button>
       <Button variant="secondary">secondary</Button>
       {/* button end */}
+      {/* OtherButton start */}
+      <OtherButtons variant='upload'></OtherButtons>
+      <OtherButtons variant='download'></OtherButtons>
+      {/* OtgerButton end */}
       {/* input start */}
       <Row className="justify-content-md-center">
         <Form>
