@@ -10,7 +10,6 @@ export type Aquarium = {
   ph: number;
   dawn: Date;
   sunset: Date;
-
   device: Device;
 };
 
@@ -21,6 +20,7 @@ export type PaginatedAquarium = {
   phs: { ph: number; time: Date }[];
   dawn: Date;
   sunset: Date;
+  lightOn?: boolean;
 };
 
 export type createAquarium = {

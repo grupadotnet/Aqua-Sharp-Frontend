@@ -14,6 +14,7 @@
     "@fortawesome/fontawesome-svg-core": "^6.2.1",
     "@fortawesome/free-solid-svg-icons": "^6.2.1",
     "@fortawesome/react-fontawesome": "^0.2.0",
+    "@microsoft/signalr": "^8.0.0",
     "axios": "^1.4.0",
     "chart.js": "^4.2.0",
     "flag-icons": "^6.6.6",
@@ -26,8 +27,8 @@
     "react-dom": "^18.2.0",
     "react-i18next": "^12.1.4",
     "react-router-dom": "^6.6.2",
-    "ux4iot-react": "^3.4.1",
-    "universal-cookie": "^4.0.4"
+    "universal-cookie": "^4.0.4",
+    "ux4iot-react": "^3.4.1"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^5.16.5",
