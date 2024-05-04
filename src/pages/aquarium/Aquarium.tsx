@@ -4,6 +4,9 @@ import { useTranslation } from 'react-i18next';
 import { useParams } from 'react-router';
 import { useNavigate } from 'react-router-dom';
 
+import { HttpTransportType, HubConnectionBuilder } from '@microsoft/signalr';
+import Cookies from 'universal-cookie';
+
 import { BarChart, DataCard, LineChart, Tile } from '@/components';
 import { api } from '@/services/axios';
 import {
@@ -11,11 +14,12 @@ import {
   PaginatedAquarium,
 } from '@/types/aquarium/aquarium';
 import { Measurement } from '@/types/measurement/measurement';
+import.meta.env;
 
 const Aquarium = () => {
   const { t } = useTranslation();
   const [aquarium, setAquarium] = useState<PaginatedAquarium>(
-    {} as PaginatedAquarium
+    {} as PaginatedAquarium,
   );
 
   const params = useParams();
@@ -55,6 +59,13 @@ const Aquarium = () => {
               }))
               .sort((a, b) => a.time.getTime() - b.time.getTime())
               .slice(0, 10),
+            lightOn:
+              paginated.reduce(
+                (latest, obj) =>
+                  new Date(obj.time) > new Date(latest.time) ? obj : latest,
+                paginated[0],
+              )?.lightOn ??
+              (new Date() > aquarium.dawn && aquarium.sunset),
           });
         })
         .catch((e) => {
@@ -65,15 +76,64 @@ const Aquarium = () => {
         });
 
     getAquariumData();
-    const fetchAquariumData = setInterval(getAquariumData, 3000 * 60);
-    return () => clearInterval(fetchAquariumData);
+
+    const connection = new HubConnectionBuilder()
+      .withUrl(
+        `${
+          import.meta.env.VITE_API_BASE_PATH
+        }/aquahub?access_token=${new Cookies().get('Authorization')}`,
+        {
+          skipNegotiation: true,
+          transport: HttpTransportType.WebSockets,
+        },
+      )
+      .build();
+
+    connection
+      .start()
+      .catch((err) =>
+        console.error('Błąd podczas łączenia z serwerem SignalR:', err),
+      );
+
+    connection.on('SendMeasure', (mes: Measurement) => {
+      const { temperatures, phs } = aquarium;
+
+      temperatures.push({
+        temperature: mes.temperature,
+        time: new Date(mes.time),
+      });
+
+      if (temperatures.length > 20) {
+        temperatures.shift();
+      }
+
+      phs.push({
+        ph: mes.ph,
+        time: new Date(mes.time),
+      });
+
+      if (phs.length > 20) {
+        phs.shift();
+      }
+
+      setAquarium({
+        ...aquarium,
+        temperatures: [...temperatures],
+        phs: [...phs],
+      });
+      console.log(aquarium);
+    });
+
+    return () => {
+      connection.stop();
+    };
   }, []);
 
   return (
     <div>
       <header className="fw-semibold text-capitalize mb-4 h3">{`${t(
         'aquarium',
-        { ns: 'aquarium' }
+        { ns: 'aquarium' },
       )} ${params.id}`}</header>
       <Row>
         <Col lg={4} md={4} xs={12}>
@@ -104,7 +164,7 @@ const Aquarium = () => {
             theme="info"
             title={t('light status', { ns: 'aquarium' })}
             content={
-              new Date() > aquarium.dawn && aquarium.sunset
+              aquarium.lightOn
                 ? t('turned on', { ns: 'aquarium' })
                 : t('turned off', { ns: 'aquarium' })
             }
@@ -120,7 +180,7 @@ const Aquarium = () => {
               dataX={
                 aquarium.temperatures
                   ? aquarium.temperatures.map(({ time }) =>
-                      time.toLocaleTimeString()
+                      time.toLocaleTimeString(),
                     )
                   : []
               }

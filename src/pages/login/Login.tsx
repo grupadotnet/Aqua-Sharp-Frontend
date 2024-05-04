@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom';
 
 import Cookies from 'universal-cookie';
 
-import { PasswordInput } from '@/components';
+import { Input, PasswordInput } from '@/components';
 import FullWidthButton from '@/components/button/FullWidthButton';
 import { useAuthorization } from '@/hooks';
 import { api } from '@/services/axios';
@@ -13,7 +13,8 @@ import { Login as LoginType } from '@/types/config/login';
 
 const Login = () => {
   const { t } = useTranslation();
-  const [data, setData] = useState<LoginType>({} as LoginType);
+  const [username, setUsername] = useState<string>('');
+  const [password, setPassword] = useState<string>('');
   const [error, setError] = useState('');
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [_, setUser] = useAuthorization();
@@ -23,8 +24,9 @@ const Login = () => {
   const login = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     api
-      .post('Config/login', {
-        password: data.password,
+      .post('Auth/login', {
+        password,
+        login: username,
       })
       .then((res) => {
         if (res.data && res.status === 200) {
@@ -32,7 +34,7 @@ const Login = () => {
           cookies.set('Authorization', res.data, {
             expires: new Date(date.setDate(date.getDate() + 1)),
           });
-          setUser({ username: 'Wiktor', isLogged: true });
+          setUser({ username, isLogged: true });
           navigate('/');
         } else {
           setError(t('Something went wrong', { ns: 'common' }));
@@ -51,9 +53,13 @@ const Login = () => {
         </Row>
         <form onSubmit={login}>
           <div className="pb-3">
+            <Input
+              placeholder={t('username', { ns: 'common' })}
+              onChange={(e) => setUsername(e.target.value)}
+            />
             <PasswordInput
               placeholder={t('password', { ns: 'common' })}
-              onChange={(e) => setData({ password: e.target.value })}
+              onChange={(e) => setPassword(e.target.value)}
             />
           </div>
           <p className="text-danger pb-3 m-0">{error}</p>
