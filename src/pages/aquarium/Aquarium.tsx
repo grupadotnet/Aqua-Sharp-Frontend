@@ -96,6 +96,10 @@ const Aquarium = () => {
       );
 
     connection.on('SendMeasure', (mes: Measurement) => {
+      if (mes.aquariumId !== aquarium.aquariumId) {
+        return;
+      }
+
       const { temperatures, phs } = aquarium;
 
       temperatures.push({
