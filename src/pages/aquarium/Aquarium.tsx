@@ -14,7 +14,6 @@ import {
   PaginatedAquarium,
 } from '@/types/aquarium/aquarium';
 import { Measurement } from '@/types/measurement/measurement';
-import.meta.env;
 
 const Aquarium = () => {
   const { t } = useTranslation();
